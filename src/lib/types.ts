@@ -7,3 +7,10 @@ export interface PostData {
 	path: string;
 	content?: Component;
 }
+
+export interface ProjectData {
+	title: string;
+	subtitle: string;
+	imageSrc: string;
+	href: string;
+}

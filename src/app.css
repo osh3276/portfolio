@@ -9,6 +9,8 @@
 	--fg-1: #aeaeae;
 	--fg-2: #787878;
 	--fg-3: #424242;
+	--accent-1: #a679c6;
+	--accent-2: #ff69b4;
 	--code-font: 'Overpass Mono', monospace;
 }
 
@@ -36,7 +38,7 @@ main {
 
 h1 {
 	font-family: 'Overpass Mono', monospace;
-	font-size: 36px;
+	font-size: 48px;
 	font-weight: 600;
 }
 

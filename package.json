@@ -48,6 +48,7 @@
 		"@sveltejs/adapter-vercel": "^5.6.3",
 		"@types/node": "^22.13.13",
 		"prismjs": "^1.30.0",
-		"rehype-prism-plus": "^2.0.1"
+		"rehype-prism-plus": "^2.0.1",
+		"svelte-bricks": "^0.3.2"
 	}
 }

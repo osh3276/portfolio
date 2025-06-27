@@ -22,17 +22,21 @@
 	}
 
 	.card {
-		border-radius: 1rem;
+		border-radius: 0rem;
 		overflow: hidden;
 		background-color: var(--bg-2);
 		color: var(--fg-1);
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-		max-width: 300px;
-		transition: transform 0.2s ease;
+		outline: 2px solid transparent;
+		transition:
+			transform 0.2s ease,
+			opacity 0.2s ease,
+			outline-color 0.2s ease;
 	}
 
 	.card:hover {
-		transform: translateY(-5px);
+		outline-color: var(--accent-1);
+		/* transform: translateY(-5px); */
 	}
 
 	.card-image {

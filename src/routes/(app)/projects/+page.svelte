@@ -1,48 +1,35 @@
-<script>
+<script lang="ts">
 	import Card from '$lib/card.svelte';
+	import Masonry from 'svelte-bricks';
+	import type { ProjectData } from '$lib/types';
+	import projectJson from './projects.json';
+
+	let projects: ProjectData[] = projectJson;
+	let items = $derived(projects.map((p) => ({ ...p, id: p.href })));
+	let [minColWidth, maxColWidth, gap] = [250, 800, 20];
 </script>
 
-<main>
+<div class="mx-auto mb-10 max-w-3xl pt-6">
 	<h1 class="mb-10">projects</h1>
 	<section>
 		<p>a collection of some of the things i've made.</p>
 	</section>
+</div>
 
-	<section>
-		<div class="project-container">
-			<Card
-				href="https://github.com/gooosexe/boids"
-				imageSrc="/images/boids.png"
-				title="boids"
-				subtitle="simple simulation of flocking behavior in birds"
-			/>
-			<Card
-				href="https://corkboard-gray.vercel.app/"
-				imageSrc="/images/corkboard.png"
-				title="corkboard"
-				subtitle="a message board with an interesting twist"
-			/>
-			<Card
-				href="https://github.com/gooosexe/nbodysim"
-				imageSrc="/images/nbodysim.png"
-				title="nbodysim"
-				subtitle="an nbody simulation, using the barnes-hut algorithm"
-			/>
-			<Card
-				href="https://hack404.dev/"
-				imageSrc="/images/hack404.png"
-				title="hack404"
-				subtitle="website for hack404, a toronto-based hackathon"
-			/>
-			<Card
-				href="https://paperade.vercel.app/"
-				imageSrc="/images/paperade.png"
-				title="paperade"
-				subtitle="a tool to help you find and read papers efficiently"
-			/>
-		</div>
-	</section>
-</main>
+<section class="mx-auto max-w-5xl">
+	<div class="project-container">
+		<Masonry {items} {minColWidth} {maxColWidth} {gap}>
+			{#snippet children({ item })}
+				<Card
+					href={item.href}
+					imageSrc={item.imageSrc}
+					title={item.title}
+					subtitle={item.subtitle}
+				/>
+			{/snippet}
+		</Masonry>
+	</div>
+</section>
 
 <style>
 	.project-container {
@@ -51,5 +38,6 @@
 		flex-wrap: wrap;
 		gap: 2rem;
 		align-items: center;
+		justify-content: center;
 	}
 </style>

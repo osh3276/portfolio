@@ -86,8 +86,7 @@
 	input {
 		background-color: var(--bg-1);
 		width: 100%;
-		border-radius: 8px;
-		border: 3px solid var(--bg-2);
+		border: 2px solid var(--bg-2);
 		padding: 0.5rem;
 		letter-spacing: 0.05em;
 		font-size: 1rem;
@@ -96,36 +95,36 @@
 
 	input:focus {
 		box-shadow: none;
-		border: 3px solid var(--bg-3);
+		border: 2px solid var(--accent-1);
 	}
 
 	textarea {
 		background-color: var(--bg-1);
 		width: 100%;
-		border-radius: 8px;
-		border: 3px solid var(--bg-2);
+		border: 2px solid var(--bg-2);
 		padding: 0.5rem;
 		letter-spacing: 0.05em;
 		font-size: 1rem;
+		transition: border 0.2s ease;
 	}
 
 	textarea:focus {
 		box-shadow: none;
-		border: 3px solid var(--bg-3);
+		border: 2px solid var(--accent-1);
 	}
 
 	button {
 		background-color: var(--bg-2);
 		color: var(--fg-1);
 		padding: 10px 20px;
+		outline: 2px solid transparent;
 		font-size: 1rem;
 		border: none;
-		border-radius: 8px;
 		cursor: pointer;
-		transition: background-color 0.2s ease;
+		transition: outline-color 0.2s ease;
 	}
 
 	button:hover {
-		background-color: var(--bg-3);
+		outline-color: var(--accent-2);
 	}
 </style>
