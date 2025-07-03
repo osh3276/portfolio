@@ -3,4 +3,4 @@ title: hello
 date: 2025-06-13
 ---
 
-welcome to my blog.
+hi

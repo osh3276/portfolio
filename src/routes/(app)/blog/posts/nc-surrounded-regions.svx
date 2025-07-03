@@ -1,6 +1,6 @@
 ---
 title: "surrounded regions [M]"
-subtitle: "daily neetcode #1"
+subtitle: "neetcode #1"
 date: 2025-06-15
 ---
 Since I’m still painfully unemployed, I’ve decided that doing one Neetcode problem per day is a decently good idea. Surrounded regions is the first problem of this series.

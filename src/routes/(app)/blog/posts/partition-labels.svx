@@ -1,6 +1,6 @@
 ---
 title: partition labels [M]
-subtitle: "daily neetcode #4"
+subtitle: "neetcode #4"
 date: 2025-06-18
 ---
 ## the problem
@@ -17,7 +17,7 @@ Output: [5, 5, 1, 1, 1]
 ```
 
 ## the idea
-We can use the two pointers technique to solve this. If we can figure out every point where there are no more letters of certain kind after that point, we should be able to figure out where to make our cuts. 
+We can use the two pointers technique to solve this. If we can figure out every point where there are no more letters of certain kind after that point, we should be able to figure out where to make our cuts.
 ## the solution
 We start by marking the last occurrence of every single character. This can be achieved using a dictionary.
 ```python
@@ -33,8 +33,8 @@ start = end = 0
 for i, c in enumerate(s):
     end = max(end, last[c])  # make sure we include the furthest partition
     if i == end:  # partition is complete
-        cuts.append(end - start + 1) 
-        start = i + 1 
+        cuts.append(end - start + 1)
+        start = i + 1
 
 return cuts
 ```

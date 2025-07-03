@@ -1,6 +1,6 @@
 ---
 title: meeting rooms II [M]
-subtitle: "daily neetcode #3"
+subtitle: "neetcode #3"
 date: 2025-06-17
 ---
 This one is slightly harder than its sister problem.

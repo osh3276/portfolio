@@ -1,6 +1,6 @@
 ---
 title: meeting rooms [E]
-subtitle: "daily neetcode #2"
+subtitle: "neetcode #2"
 date: 2025-06-17
 ---
 I didn't have time to do a question yesterday, so I will do two today.
