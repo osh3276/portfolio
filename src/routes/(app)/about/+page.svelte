@@ -8,12 +8,12 @@
 			'coming soon': ['rust']
 		},
 		tech: {
-			frontend: ['react', 'next.js', 'sveltekit', 'tailwind'],
-			backend: ['node.js', 'express', 'postgresql', 'mongodb', 'spring'],
-			tools: ['docker', 'postman', 'git', 'pgadmin'],
-			cloud: ['vercel', 'render', 'github pages', 'google cloud'],
-			os: ['macos sequoia', 'xubuntu 24.04', 'debian 11'],
-			editors: ['vscode', 'nvim', 'intellij idea']
+			frontend: ['next.js', 'react native', 'sveltekit', 'tailwind'],
+			backend: ['node.js', 'express', 'postgresql', 'mongodb', 'spring', 'axum'],
+			tools: ['docker', 'postman', 'git', 'dbeaver'],
+			cloud: ['vercel', 'render', 'gcp', 'cloudinary'],
+			ai: ['openai', 'google gemini'],
+			os: ['macos sequoia', 'xubuntu 24.04', 'debian 11']
 		}
 	};
 </script>
@@ -23,8 +23,15 @@
 
 	<section class="mb-10">
 		<p class="mt-2">
-			i’m an undergraduate student studying cs and physics at u of t. i'm interested in
-			computational physics, astrophysics, software dev, game dev, and more.
+			i’m an undergraduate student studying physics, math, and computer science at u of t. i build
+			good software and study cool stuff. currently learning about quantum computing and
+			cybersecurity.
+
+			<br />
+			<br />
+
+			i recently organized <a href="https://hack404.dev">hack404</a>, a hackathon at u of t, where i
+			led a team of students to develop a web application for managing hacker accounts and projects.
 		</p>
 	</section>
 

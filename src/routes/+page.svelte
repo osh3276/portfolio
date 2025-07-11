@@ -5,7 +5,7 @@
 <div class="flex justify-center">
 	<div class="flex min-h-dvh w-4/5 flex-col justify-center overflow-hidden leading-normal">
 		<h1 class="text-5xl">oliver huang.</h1>
-		<p>cs and physics student.</p>
+		<p>physics + math + cs student.</p>
 		<nav class="mt-3 flex gap-10">
 			<a class="nav-item" href="/about">about</a>
 			<a class="nav-item" href="/projects">projects</a>
