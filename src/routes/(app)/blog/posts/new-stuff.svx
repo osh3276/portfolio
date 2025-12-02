@@ -1,0 +1,20 @@
+---
+title: new stuff
+date: 2025-12-02
+---
+## where i've been
+So I think it's pretty evident that I ended up giving up on the daily neetcodes, only four days in. Although what ACTUALLY happened was I ended up spending a lot of time running a hackathon in early July, and proceeded to burn out very hard. There is a 5 week gap in my GitHub contribution graph. I honestly have no idea what I did during that time, but it was probably a lot of frolicking and dilly dallying. Anyways, I know next to no one is actually reading this, so I think it's safe to just use this as some sort of writing outlet.
+
+## what i'm doing now
+Aside from the CSC207 final project presentation I have in about 13 hours (it is currently 3 in the morning) and emailing every single professor under the sun for some summer research, I've been working on a few side projects. One of which is big, and one of which is small.
+### the big one
+The big one is a isometric roguelite game I've been slowly developing, called Skychaser. There's a very large document with tons of ideas on it in a shared Google Drive folder right now. I've gotten three other friends onboard with the idea, with two of them being artists. I'm hoping they'll stick around, since I am not very good at drawing. The third friend (his name is Marcus) is helping me program and will also be making music along the side. He was actually the one that coined the name for the game. If you're interested in following the development process, you can go to [shiveringdog.github.io](https://shiveringdog.github.io). We named the studio after Marcus's very old chihuahua. Anyways, this is a pretty ambitious project that I'm expecting will take several years, so I'm not so urgent on getting too much done as of now.
+### the small one
+The small one is actually another game, albeit significantly smaller. It's just a minigolf game that uses particles instead of golf balls, and celestial bodies instead of regular minigolf obstacles. The idea is to shoot particles and bend them around celestial bodies to make them land in a goal. I'm not really aiming to have a lot of people play it or anything, it's mainly just a project for me to try out raylib. I haven't touched C++ in a while, so I figured I might as well brush up on it by writing a small game.
+
+## for the future
+I suppose I'll update this blog more. With dev logs, book reviews, and anything else I feel like yapping about. As it turns out, there aren't many people that are interested in listening to me yap. I think I'll add an RSS feed button. Perhaps someone will stumble upon this blog 20 years down the line. Or I'll become a bigshot physicist and people will read all of my silly thoughts from undergrad. One can only dream.
+
+It's probably best I get going now. I still want to wake up in time for tomorrow's presentation.
+
+osh

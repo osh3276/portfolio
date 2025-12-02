@@ -86,6 +86,8 @@
 			<div class="colors">
 				<div class="color" style="background: var(--bg-1); border: 2px solid var(--bg-2);">bg</div>
 				<div class="color" style="background: var(--bg-2);">bg-2</div>
+				<div class="color" style="background: var(--bg-3);">bg-3</div>
+				<div class="color" style="background: var(--fg-3); color: var(--bg-1)">fg-3</div>
 				<div class="color" style="background: var(--fg-2); color: var(--bg-1)">fg-2</div>
 				<div class="color" style="background: var(--fg-1); color: var(--bg-1)">fg-1</div>
 				<div class="color" style="background: var(--accent-1); color: var(--bg-1)">a-1</div>

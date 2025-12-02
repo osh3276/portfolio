@@ -3,38 +3,38 @@
 		"href": "https://vibe-tune-ten.vercel.app",
 		"imageSrc": "/images/gemini.jpg",
 		"title": "vibetune",
-		"subtitle": "video-to-music ai generator powered by gemini 2.5 pro and lyria 2"
+		"subtitle": "video-to-music ai generator powered by gemini 2.5 pro and lyria 2. made for spurhacks 2025."
 	},
 
 	{
 		"href": "https://hack404.dev/",
 		"imageSrc": "/images/hack404.png",
 		"title": "hack404",
-		"subtitle": "website for hack404, a toronto-based hackathon"
+		"subtitle": "website for hack404, a toronto-based hackathon."
 	},
 
 	{
 		"href": "https://paperade.vercel.app/",
 		"imageSrc": "/images/paperade.png",
 		"title": "paperade",
-		"subtitle": "a tool powered by gpt-4o to help you find and read papers efficiently"
+		"subtitle": "a tool powered by gpt-4o to help you find and read papers efficiently."
 	},
 	{
 		"href": "https://github.com/gooosexe/boids",
 		"imageSrc": "/images/boids.png",
 		"title": "boids",
-		"subtitle": "simple simulation of flocking behavior in birds"
+		"subtitle": "a simple simulation of flocking behavior in birds."
 	},
 	{
 		"href": "https://corkboard-gray.vercel.app/",
 		"imageSrc": "/images/corkboard.png",
 		"title": "corkboard",
-		"subtitle": "a message board with an interesting twist"
+		"subtitle": "a message board with an interesting twist."
 	},
 	{
 		"href": "https://github.com/gooosexe/nbodysim",
 		"imageSrc": "/images/nbodysim.png",
 		"title": "nbodysim",
-		"subtitle": "an nbody simulation, using the barnes-hut algorithm"
+		"subtitle": "a simple 2d n-body simulation, created with matplotlib."
 	}
 ]
