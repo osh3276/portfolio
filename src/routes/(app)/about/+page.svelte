@@ -74,7 +74,11 @@
 				fonts →
 				<span style="font-family: 'Spectral'" class="tracking-normal">spectral</span>
 				<span class="split">/</span>
-				newsreader
+				eb garamond
+				<span class="split">/</span>
+				<span style="font-family: 'CommitMono'; font-size: 16px" class="tracking-normal"
+					>commit mono</span
+				>
 			</li>
 		</ul>
 		<div class="info">
@@ -103,7 +107,7 @@
 		display: inline-block;
 		width: 5rem;
 		text-align: center;
-		font-family: 'overpass mono', monospace;
+		font-family: 'commitMono', monospace;
 		font-size: 1em;
 		border: 2px solid rgba(0, 0, 0, 0);
 	}
