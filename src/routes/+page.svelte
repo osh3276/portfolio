@@ -4,9 +4,9 @@
 
 <div class="flex justify-center">
 	<div class="flex min-h-dvh w-4/5 flex-col justify-center overflow-hidden leading-normal">
-		<h1 class="text-5xl">oliver huang.</h1>
-		<p>physics + math + cs student.</p>
-		<nav class="mt-3 flex gap-10">
+		<h1 class="text-5xl">oliver huang</h1>
+		<p class="mt-2">physics, mathematics, and computer science student.</p>
+		<nav class="mt-1 flex gap-10">
 			<a class="nav-item" href="/about">about</a>
 			<a class="nav-item" href="/projects">projects</a>
 			<a class="nav-item" href="/blog">blog</a>
@@ -19,7 +19,7 @@
 	.nav-item {
 		display: flex;
 		align-items: center;
-		font-family: 'Overpass Mono', monospace;
+		font-family: 'Newsreader', monospace;
 		gap: 0.5rem;
 		font-size: 1.2rem;
 		text-decoration: none;

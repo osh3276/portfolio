@@ -1,23 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Overpass+Mono:wght@300;400;600;700&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
 :root {
-	--bg-1: #1a1b26;
-	--bg-2: #24283b;
-	--bg-3: #414868;
-	--fg-1: #a9b1d6;
-	--fg-2: #9aa5ce;
-	--fg-3: #565f89;
-	--accent-1: #bb9af7;
-	--accent-2: #7aa2f7;
+	--bg-1: #282828;
+	--bg-2: #3c3836;
+	--bg-3: #504945;
+	--fg-1: #d5c4a1;
+	--fg-2: #bdae93;
+	--fg-3: #a89984;
+	--accent-1: #d3869b;
+	--accent-2: #83a598;
 	--code-font: 'Overpass Mono', monospace;
 }
 
 body {
 	background-color: var(--bg-1);
 	color: var(--fg-1);
-	font-family: 'Overpass', sans-serif;
+	font-family: 'Newsreader', sans-serif;
 	line-height: 2;
 	font-feature-settings: 'liga' 1; /* Enables standard ligatures */
 	-webkit-font-feature-settings: 'liga' 1; /* For Safari */
@@ -37,14 +41,22 @@ main {
 }
 
 h1 {
-	font-family: 'Overpass Mono', monospace;
+	font-family: 'Spectral', sans-serif;
 	font-size: 48px;
-	font-weight: 600;
+	font-style: italic;
+	font-weight: 400;
 }
 
 h2 {
-	font-family: 'Overpass Mono', monospace;
+	font-family: 'Spectral', sans-serif;
 	font-size: 30px;
+	font-weight: 300;
+	margin-top: 1rem;
+}
+
+h3 {
+	font-family: 'Spectral', sans-serif;
+	font-size: 24px;
 	font-weight: 600;
 }
 
@@ -53,9 +65,10 @@ section {
 }
 
 p {
-	font-family: 'Overpass', sans-serif;
-	font-size: 14pt;
-	letter-spacing: 0.05em;
+	font-family: 'Newsreader', sans-serif;
+	font-size: 16pt;
+	letter-spacing: 0em;
+	line-height: 2rem;
 }
 
 a {
@@ -68,10 +81,6 @@ a {
 li {
 	font-size: 14pt;
 	letter-spacing: 0.05em;
-}
-
-.nav-item {
-	font-size: 'overpass mono', monospace;
 }
 
 a:hover {

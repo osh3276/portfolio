@@ -9,7 +9,7 @@
 	<a {href} class="hover:no-underline">
 		<img src={imageSrc} alt={title} class="card-image" />
 		<div class="card-content">
-			<h2 class="card-title">{title}</h2>
+			<h1 class="card-title">{title}</h1>
 			<p class="card-subtitle">{subtitle}</p>
 		</div>
 	</a>
@@ -51,13 +51,13 @@
 
 	.card-title {
 		margin: 0;
-		font-size: 1.25rem;
-		font-weight: 600;
+		font-size: 1.75rem;
+		font-weight: 500;
 	}
 
 	.card-subtitle {
 		margin-top: 0.5rem;
-		font-size: 0.95rem;
+		font-size: 1rem;
 		color: var(--fg-2);
 	}
 </style>

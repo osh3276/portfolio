@@ -7,9 +7,9 @@ So I think it's pretty evident that I ended up giving up on the daily neetcodes,
 
 ## what i'm doing now
 Aside from the CSC207 final project presentation I have in about 13 hours (it is currently 3 in the morning) and emailing every single professor under the sun for some summer research, I've been working on a few side projects. One of which is big, and one of which is small.
-### the big one
+## the big one
 The big one is a isometric roguelite game I've been slowly developing, called Skychaser. There's a very large document with tons of ideas on it in a shared Google Drive folder right now. I've gotten three other friends onboard with the idea, with two of them being artists. I'm hoping they'll stick around, since I am not very good at drawing. The third friend (his name is Marcus) is helping me program and will also be making music along the side. He was actually the one that coined the name for the game. If you're interested in following the development process, you can go to [shiveringdog.github.io](https://shiveringdog.github.io). We named the studio after Marcus's very old chihuahua. Anyways, this is a pretty ambitious project that I'm expecting will take several years, so I'm not so urgent on getting too much done as of now.
-### the small one
+## the small one
 The small one is actually another game, albeit significantly smaller. It's just a minigolf game that uses particles instead of golf balls, and celestial bodies instead of regular minigolf obstacles. The idea is to shoot particles and bend them around celestial bodies to make them land in a goal. I'm not really aiming to have a lot of people play it or anything, it's mainly just a project for me to try out raylib. I haven't touched C++ in a while, so I figured I might as well brush up on it by writing a small game.
 
 ## for the future

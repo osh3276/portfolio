@@ -16,7 +16,7 @@
 	</section>
 </div>
 
-<section class="mx-auto max-w-5xl">
+<section class="100% mx-auto max-w-5xl">
 	<div class="project-container">
 		<Masonry {items} {minColWidth} {maxColWidth} {gap}>
 			{#snippet children({ item })}

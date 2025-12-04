@@ -1,19 +1,17 @@
 <script context="module" lang="ts">
 	let content = {
 		languages: {
+			general: ['python', 'java', 'c#', 'rust', 'c++'],
 			web: ['js', 'ts', 'html', 'css'],
-			scripting: ['python', 'bash', 'zsh'],
-			embedded: ['c', 'c++'],
-			other: ['java', 'sql'],
-			'coming soon': ['rust']
+			scripting: ['bash', 'zsh'],
+			other: ['sql', 'r']
 		},
 		tech: {
-			frontend: ['next.js', 'react native', 'sveltekit', 'tailwind'],
-			backend: ['node.js', 'express', 'postgresql', 'mongodb', 'spring', 'axum'],
-			tools: ['docker', 'postman', 'git', 'dbeaver'],
-			cloud: ['vercel', 'render', 'gcp', 'cloudinary'],
-			ai: ['openai', 'google gemini'],
-			os: ['macos sequoia', 'xubuntu 24.04', 'debian 11']
+			frontend: ['next.js', 'react', 'sveltekit', 'tailwind'],
+			backend: ['node.js', 'express', 'postgresql', 'mongodb', 'spring', 'flask'],
+			tools: ['docker', 'postman', 'git', 'pgadmin', 'dbeaver'],
+			cloud: ['gcp', 'aws'],
+			os: ['macos tahoe']
 		}
 	};
 </script>
@@ -23,13 +21,10 @@
 
 	<section class="mb-10">
 		<p class="mt-2">
-			i’m an undergraduate student studying physics, math, and computer science at u of t. i build
-			good software and study cool stuff. currently learning about quantum computing and
-			cybersecurity.
-
+			i’m an undergraduate student studying physics, math, and computer science at u of t. i study
+			cool stuff and make projects from time to time.
 			<br />
 			<br />
-
 			i recently organized <a href="https://hack404.dev">hack404</a>, a hackathon at u of t, where i
 			led a team of students to develop a web application for managing hacker accounts and projects.
 		</p>
@@ -77,9 +72,9 @@
 			</li>
 			<li>
 				fonts →
-				<span style="font-family: 'Overpass Mono'" class="tracking-normal">overpass mono </span>
+				<span style="font-family: 'Spectral'" class="tracking-normal">spectral</span>
 				<span class="split">/</span>
-				overpass
+				newsreader
 			</li>
 		</ul>
 		<div class="info">

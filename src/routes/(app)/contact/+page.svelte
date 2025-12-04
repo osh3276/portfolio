@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { LinkedinLogo, Envelope, GithubLogo } from 'phosphor-svelte';
 
-	let status = $state('submit ->');
+	let status = $state('submit');
 
 	const handleSubmit = async (data: SubmitEvent) => {
 		data.preventDefault();
@@ -40,16 +40,16 @@
 		<h2>some links</h2>
 		<ul>
 			<li>
-				<GithubLogo class="inline-block h-6 w-6" /> github ->
+				<GithubLogo class="inline-block h-6 w-6" /> github:
 				<a href="https://github.com/osh3276">osh3276</a>
 			</li>
 			<li>
-				<LinkedinLogo class="inline-block h-6 w-6" /> linkedin ->
+				<LinkedinLogo class="inline-block h-6 w-6" /> linkedin:
 				<a href="https://www.linkedin.com/in/oliver-huang-931947232/">oliver huang</a>
 			</li>
 			<!-- email -->
 			<li>
-				<Envelope class="inline-block h-6 w-6" /> email ->
+				<Envelope class="inline-block h-6 w-6" /> email:
 				<a href="mailto:ohuang4131@gmail.com">osh3276@gmail.com</a>
 			</li>
 		</ul>
@@ -116,7 +116,7 @@
 	button {
 		background-color: var(--bg-2);
 		color: var(--fg-1);
-		padding: 10px 20px;
+		padding: 8px 16px;
 		outline: 2px solid transparent;
 		font-size: 1rem;
 		border: none;
