@@ -21,11 +21,11 @@
 
 	<section class="mb-10">
 		<p class="mt-2">
-			i’m an undergraduate student studying physics, math, and computer science at u of t. i study
+			i'm an undergraduate student studying physics, math, and computer science at the university of toronto. i study
 			cool stuff and make projects from time to time.
 			<br />
 			<br />
-			i recently organized <a href="https://hack404.dev">hack404</a>, a hackathon at u of t, where i
+			i recently organized <a href="https://hack404.dev">hack404</a>, a hackathon at the university of toronto, where i
 			led a team of students to develop a web application for managing hacker accounts and projects.
 		</p>
 	</section>
@@ -93,14 +93,18 @@
 				<div class="color" style="background: var(--accent-2); color: var(--bg-1)">a-2</div>
 			</div>
 		</div>
+		layout inspired by <a href="https://refact0r.dev">refact0r</a>.
 	</section>
 </main>
 
 <style>
 	.colors {
-		display: inline-flex;
+		display: flex;
+		justify-content: center;
 		margin-top: 0.4rem;
 		flex-wrap: wrap;
+		border-radius: 15rem;
+		overflow: hidden;
 	}
 
 	.color {
@@ -110,5 +114,15 @@
 		font-family: 'commitMono', monospace;
 		font-size: 1em;
 		border: 2px solid rgba(0, 0, 0, 0);
+	}
+
+	.color:first-child {
+		border-top-left-radius: 15rem;
+		border-bottom-left-radius: 15rem;
+	}
+	
+	.color:last-child {
+		border-top-right-radius: 15rem;
+		border-bottom-right-radius: 15rem;
 	}
 </style>

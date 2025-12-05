@@ -1,23 +1,15 @@
 [
 	{
-		"href": "https://vibe-tune-ten.vercel.app",
-		"imageSrc": "/images/gemini.jpg",
-		"title": "vibetune",
-		"subtitle": "video-to-music ai generator powered by gemini 2.5 pro and lyria 2. made for spurhacks 2025."
+		"href": "https://www.hackcanada.org/",
+		"imageSrc": "/images/hackcanada.png",
+		"title": "hackcanada",
+		"subtitle": "website for hackcanada, a student organized hackathon in canada."
 	},
-
 	{
 		"href": "https://hack404.dev/",
 		"imageSrc": "/images/hack404.png",
 		"title": "hack404",
 		"subtitle": "website for hack404, a toronto-based hackathon."
-	},
-
-	{
-		"href": "https://paperade.vercel.app/",
-		"imageSrc": "/images/paperade.png",
-		"title": "paperade",
-		"subtitle": "a tool powered by gpt-4o to help you find and read papers efficiently."
 	},
 	{
 		"href": "https://github.com/gooosexe/boids",
@@ -36,5 +28,11 @@
 		"imageSrc": "/images/nbodysim.png",
 		"title": "nbodysim",
 		"subtitle": "a simple 2d n-body simulation, created with matplotlib."
+	},
+		{
+		"href": "https://github.com/osh3276/vibe-tune",
+		"imageSrc": "/images/gemini.jpg",
+		"title": "vibetune",
+		"subtitle": "video-to-music ai generator powered by gemini 2.5 pro and lyria 2. made for spurhacks 2025."
 	}
 ]

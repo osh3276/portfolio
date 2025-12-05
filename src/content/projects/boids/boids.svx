@@ -1,9 +1,0 @@
----
-title: boids
-date: mar 25 2025
----
-
-# boids
-> mar 25 2025
-
-stuff about boids

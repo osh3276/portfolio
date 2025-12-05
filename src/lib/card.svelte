@@ -22,7 +22,7 @@
 	}
 
 	.card {
-		border-radius: 0rem;
+		border-radius: 1rem;
 		overflow: hidden;
 		background-color: var(--bg-2);
 		color: var(--fg-1);
