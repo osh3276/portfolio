@@ -80,6 +80,7 @@
 					>commit mono</span
 				>
 			</li>
+			<li>layout inspired by <a href="https://refact0r.dev">refact0r</a>.</li>
 		</ul>
 		<div class="info">
 			<div class="colors">
@@ -93,7 +94,6 @@
 				<div class="color" style="background: var(--accent-2); color: var(--bg-1)">a-2</div>
 			</div>
 		</div>
-		layout inspired by <a href="https://refact0r.dev">refact0r</a>.
 	</section>
 </main>
 
