@@ -1,1 +1,1 @@
-my website. built with sveltekit, deployed on vercel.
+my website. built with astro, deployed on vercel.
