@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+function formatDate(dateString: string) {
+	const date = new Date(dateString);
+	return date.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+	}).toLowerCase();
+}
+---
+
+<Layout title={`${post.data.title} - Oliver Huang`}>
+	<main>
+		<article>
+			<div class="mb-10 flex flex-col">
+				<h1>{post.data.title}</h1>
+				<div class="flex justify-between">
+					{post.data.subtitle && <p>{post.data.subtitle}</p>}
+					<p>{formatDate(post.data.date)}</p>
+				</div>
+			</div>
+			<Content />
+		</article>
+	</main>
+</Layout>
