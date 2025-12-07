@@ -13,122 +13,76 @@
 	--fg-3: #a89984;
 	--accent-1: #d3869b;
 	--accent-2: #83a598;
-	--code-font: 'Overpass Mono', monospace;
+	--code-font: 'CommitMono', monospace;
 }
 
-body {
-	background-color: var(--bg-1);
-	color: var(--fg-1);
-	font-family: 'Newsreader', sans-serif;
-	line-height: 2;
-	font-feature-settings: 'liga' 1;
-	-webkit-font-feature-settings: 'liga' 1;
-	-moz-font-feature-settings: 'liga' 1;
-}
+@layer base {
+	body {
+		@apply bg-(--bg-1) text-(--fg-1) font-['EB_Garamond',sans-serif] leading-8;
+		font-feature-settings: 'liga' 1;
+		-webkit-font-feature-settings: 'liga' 1;
+		-moz-font-feature-settings: 'liga' 1;
+	}
 
-ul {
-	margin-top: 0.5rem;
-}
+	ul {
+		@apply mt-2;
+	}
 
-main {
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 2.5rem;
-	max-width: 48rem;
-	padding: 1.5rem;
-}
+	main {
+		@apply mx-auto max-w-4xl px-6 py-8;
+	}
 
-h1 {
-	font-family: 'Spectral', sans-serif;
-	font-size: 48px;
-	font-style: italic;
-	font-weight: 400;
-}
+	h1 {
+		@apply font-['Spectral',sans-serif] text-5xl italic font-normal;
+	}
 
-h2 {
-	font-family: 'Spectral', sans-serif;
-	font-size: 30px;
-	font-weight: 300;
-	margin-top: 1rem;
-}
+	h2 {
+		@apply font-['Spectral',sans-serif] text-[30px] font-light mt-4;
+	}
 
-h3 {
-	font-family: 'Spectral', sans-serif;
-	font-size: 24px;
-	font-weight: 600;
-}
+	h3 {
+		@apply font-['Spectral',sans-serif] text-2xl font-semibold;
+	}
 
-section {
-	margin-bottom: 2rem;
-}
+	p {
+		@apply font-['EB_Garamond',sans-serif] text-[16pt] leading-8;
+	}
 
-p {
-	font-family: 'EB Garamond', sans-serif;
-	font-size: 16pt;
-	line-height: 2rem;
-}
+	a {
+		@apply relative inline-block underline decoration-transparent transition-[text-decoration] duration-200;
+	}
 
-a {
-	position: relative;
-	display: inline-block;
-	text-decoration: underline transparent;
-	transition: text-decoration 0.2s ease-in-out;
-}
+	a:hover {
+		@apply cursor-pointer decoration-current;
+	}
 
-li {
-	font-size: 14pt;
-	letter-spacing: 0.05em;
-}
+	li {
+		@apply text-lg tracking-[0.05em];
+	}
 
-a:hover {
-	cursor: pointer;
-	text-decoration: underline currentColor;
-}
+	.split {
+		@apply text-(--fg-2);
+	}
 
-.split {
-	color: var(--fg-2);
-}
+	pre {
+		@apply bg-(--bg-2) border border-(--bg-3) rounded-lg p-4 my-6 overflow-x-auto;
+		font-family: var(--code-font) !important;
+		box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+	}
 
-/* Code block styling */
-pre {
-	background-color: var(--bg-2);
-	border: 1px solid var(--bg-3);
-	border-radius: 0.5rem;
-	padding: 1rem;
-	margin: 1.5rem 0;
-	font-family: var(--code-font) !important;
-	overflow-x: auto;
-	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-}
+	pre code {
+		@apply bg-transparent p-0 rounded-none text-sm leading-6;
+		font-family: var(--code-font) !important;
+	}
 
-pre code {
-	background-color: transparent;
-	padding: 0;
-	border-radius: 0;
-	font-family: var(--code-font) !important;
-	font-size: 0.875rem;
-	line-height: 1.5;
-}
+	pre[class*='language-'],
+	pre[class*='language-'] code,
+	code[class*='language-'] {
+		font-family: var(--code-font) !important;
+	}
 
-/* More specific selectors to override Prism */
-pre[class*='language-'] {
-	font-family: var(--code-font) !important;
-}
-
-pre[class*='language-'] code {
-	font-family: var(--code-font) !important;
-}
-
-code[class*='language-'] {
-	font-family: var(--code-font) !important;
-}
-
-/* Inline code */
-:not(pre) > code {
-	background-color: var(--bg-2);
-	padding: 0.125rem 0.375rem;
-	border-radius: 0.25rem;
-	font-family: var(--code-font) !important;
-	font-size: 0.875em;
-	border: 1px solid var(--bg-3);
+	:not(pre) > code {
+		@apply bg-(--bg-2) px-1.5 py-0.5 rounded text-sm border border-(--bg-3);
+		font-family: var(--code-font) !important;
+	}
 }

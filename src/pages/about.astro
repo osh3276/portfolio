@@ -19,10 +19,10 @@ const content = {
 ---
 
 <Layout title="About - Oliver Huang">
-	<main>
-		<h1 class="mb-10">about</h1>
+	<main class="flex flex-col gap-8">
+		<h1>about</h1>
 
-		<section class="mb-10">
+		<section>
 			<p class="mt-2">
 				i'm an undergraduate student studying physics, math, and computer science at the university of toronto. i study
 				cool stuff and make projects from time to time.
@@ -92,16 +92,16 @@ const content = {
 				</li>
 				<li>layout inspired by <a href="https://refact0r.dev">refact0r</a>.</li>
 			</ul>
-			<div class="info">
-				<div class="colors">
-					<div class="color" style="background: var(--bg-1); border: 2px solid var(--bg-2);">bg</div>
-					<div class="color" style="background: var(--bg-2);">bg-2</div>
-					<div class="color" style="background: var(--bg-3);">bg-3</div>
-					<div class="color" style="background: var(--fg-3); color: var(--bg-1)">fg-3</div>
-					<div class="color" style="background: var(--fg-2); color: var(--bg-1)">fg-2</div>
-					<div class="color" style="background: var(--fg-1); color: var(--bg-1)">fg-1</div>
-					<div class="color" style="background: var(--accent-1); color: var(--bg-1)">a-1</div>
-					<div class="color" style="background: var(--accent-2); color: var(--bg-1)">a-2</div>
+			<div class="info pt-10 pb-4">
+				<div class="colors flex flex-wrap justify-center overflow-hidden rounded-full">
+					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--bg-1); border: 2px solid var(--bg-2);">bg</div>
+					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--bg-2);">bg-2</div>
+					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--bg-3);">bg-3</div>
+					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--fg-3); color: var(--bg-1)">fg-3</div>
+					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--fg-2); color: var(--bg-1)">fg-2</div>
+					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--fg-1); color: var(--bg-1)">fg-1</div>
+					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--accent-1); color: var(--bg-1)">a-1</div>
+					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--accent-2); color: var(--bg-1)">a-2</div>
 				</div>
 			</div>
 		</section>
@@ -109,31 +109,13 @@ const content = {
 </Layout>
 
 <style>
-	.colors {
-		display: flex;
-		justify-content: center;
-		margin-top: 0.4rem;
-		flex-wrap: wrap;
-		border-radius: 15rem;
-		overflow: hidden;
-	}
-
-	.color {
-		display: inline-block;
-		width: 5rem;
-		text-align: center;
-		font-family: 'Overpass Mono', monospace;
-		font-size: 1em;
-		border: 2px solid rgba(0, 0, 0, 0);
-	}
-
 	.color:first-child {
-		border-top-left-radius: 15rem;
-		border-bottom-left-radius: 15rem;
+		border-top-left-radius: 9999px;
+		border-bottom-left-radius: 9999px;
 	}
-	
+
 	.color:last-child {
-		border-top-right-radius: 15rem;
-		border-bottom-right-radius: 15rem;
+		border-top-right-radius: 9999px;
+		border-bottom-right-radius: 9999px;
 	}
 </style>
