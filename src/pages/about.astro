@@ -1,20 +1,27 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 const content = {
 	languages: {
-		general: ['python', 'java', 'c#', 'rust', 'c++'],
-		web: ['js', 'ts', 'html', 'css'],
-		scripting: ['bash', 'zsh'],
-		other: ['sql', 'r']
+		general: ["python", "java", "c#", "rust", "c++"],
+		web: ["js", "ts", "html", "css"],
+		scripting: ["bash", "zsh"],
+		other: ["sql", "r"],
 	},
 	tech: {
-		frontend: ['next.js', 'react', 'sveltekit', 'tailwind'],
-		backend: ['node.js', 'express', 'postgresql', 'mongodb', 'spring', 'flask'],
-		tools: ['docker', 'postman', 'git', 'pgadmin', 'dbeaver'],
-		cloud: ['gcp', 'aws'],
-		os: ['macos tahoe']
-	}
+		frontend: ["next.js", "react", "sveltekit", "tailwind"],
+		backend: [
+			"node.js",
+			"express",
+			"postgresql",
+			"mongodb",
+			"spring",
+			"flask",
+		],
+		tools: ["docker", "postman", "git", "pgadmin", "dbeaver"],
+		cloud: ["gcp", "aws"],
+		os: ["macos tahoe"],
+	},
 };
 ---
 
@@ -24,84 +31,146 @@ const content = {
 
 		<section>
 			<p class="mt-2">
-				i'm an undergraduate student studying physics, math, and computer science at the university of toronto. i study
-				cool stuff and make projects from time to time.
+				I&rsquo;m an undergraduate student studying physics, math, and
+				computer science at the University of Toronto. I study cool
+				stuff and work on projects from time to time.
 				<br />
 				<br />
-				i recently organized <a href="https://hack404.dev">hack404</a>, a hackathon at the university of toronto, where i
-				led a team of students to develop a web application for managing hacker accounts and projects.
+				I&rsquo;m also helping to organize a bunch of hackathons. I organized my
+				first in the summer of 2025: <a href="https://hack404.dev"
+					>hack404</a
+				>, a hackathon hosted at the University of Toronto.
 			</p>
 		</section>
 
 		<section>
 			<h2>languages</h2>
 			<ul>
-				{Object.entries(content.languages).map(([category, items]) => (
-					<li>
-						{category} →
-						{items.map((item, i) => (
-							<>
-								{item}
-								{i < items.length - 1 && (
+				{
+					Object.entries(content.languages).map(
+						([category, items]) => (
+							<li>
+								{category} →
+								{items.map((item, i) => (
 									<>
-										<span class="split">/</span>&nbsp;
+										{item}
+										{i < items.length - 1 && (
+											<>
+												<span class="split">/</span>
+											</>
+										)}
 									</>
-								)}
-							</>
-						))}
-					</li>
-				))}
+								))}
+							</li>
+						),
+					)
+				}
 			</ul>
 		</section>
 
 		<section>
 			<h2>tech</h2>
 			<ul>
-				{Object.entries(content.tech).map(([category, items]) => (
-					<li>
-						{category} →
-						{items.map((item, i) => (
-							<>
-								{item}
-								{i < items.length - 1 && (
-									<>
-										<span class="split">/</span>&nbsp;
-									</>
-								)}
-							</>
-						))}
-					</li>
-				))}
+				{
+					Object.entries(content.tech).map(([category, items]) => (
+						<li>
+							{category} →
+							{items.map((item, i) => (
+								<>
+									{item}
+									{i < items.length - 1 && (
+										<>
+											<span class="split">/</span>
+										</>
+									)}
+								</>
+							))}
+						</li>
+					))
+				}
 			</ul>
 		</section>
 
 		<section>
 			<h2>this site</h2>
 			<ul>
+				<p>theme colours from gruvbox.</p>
 				<li>
 					stack → astro <span class="split">/</span> mdx
-					<span class="split">/</span> vite <span class="split">/</span> github pages
+					<span class="split">/</span> vite <span class="split"
+						>/</span
+					> github pages
 				</li>
 				<li>
 					fonts →
-					<span style="font-family: 'Spectral'" class="tracking-normal">spectral</span>
+					<span
+						style="font-family: 'Canela Text'"
+						class="tracking-normal">canela text</span
+					>
 					<span class="split">/</span>
-					eb garamond
-					<span class="split">/</span>
-					<span style="font-family: 'Overpass Mono'; font-size: 16px" class="tracking-normal">overpass mono</span>
+					<span
+						style="font-family: 'CommitMono'; font-size: 16px"
+						class="tracking-normal">commit mono</span
+					>
 				</li>
-				<li>layout inspired by <a href="https://refact0r.dev">refact0r</a>.</li>
+				<li>
+					layout inspired by <a href="https://refact0r.dev"
+						>refact0r</a
+					>.
+				</li>
 			</ul>
 			<div class="info pt-10 pb-4">
-				<div class="colors flex flex-wrap justify-center overflow-hidden rounded-full">
-					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--bg-1); border: 2px solid var(--bg-2);">bg</div>
-					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--bg-2);">bg-2</div>
-					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--bg-3);">bg-3</div>
-					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--fg-3); color: var(--bg-1)">fg-3</div>
-					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--fg-2); color: var(--bg-1)">fg-2</div>
-					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--fg-1); color: var(--bg-1)">fg-1</div>
-					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--accent-1); color: var(--bg-1)">a-1</div>
-					<div class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent" style="background: var(--accent-2); color: var(--bg-1)">a-2</div>
+				<div
+					class="colors flex flex-wrap justify-center overflow-hidden rounded-full"
+				>
+					<div
+						class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent"
+						style="background: var(--bg-1); border: 2px solid var(--bg-2);"
+					>
+						bg
+					</div>
+					<div
+						class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent"
+						style="background: var(--bg-2);"
+					>
+						bg-2
+					</div>
+					<div
+						class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent"
+						style="background: var(--bg-3);"
+					>
+						bg-3
+					</div>
+					<div
+						class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent"
+						style="background: var(--fg-3); color: var(--bg-1)"
+					>
+						fg-3
+					</div>
+					<div
+						class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent"
+						style="background: var(--fg-2); color: var(--bg-1)"
+					>
+						fg-2
+					</div>
+					<div
+						class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent"
+						style="background: var(--fg-1); color: var(--bg-1)"
+					>
+						fg-1
+					</div>
+					<div
+						class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent"
+						style="background: var(--accent-1); color: var(--bg-1)"
+					>
+						a-1
+					</div>
+					<div
+						class="py-1 color w-20 text-center font-['CommitMono',monospace] text-base border-2 border-transparent"
+						style="background: var(--accent-2); color: var(--bg-1)"
+					>
+						a-2
+					</div>
 				</div>
 			</div>
 		</section>

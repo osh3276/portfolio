@@ -2,6 +2,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+@font-face {
+	font-family: 'Canela Text';
+	src: url('/fonts/CanelaText-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Canela Text';
+	src: url('/fonts/CanelaText-RegularItalic.otf') format('opentype');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Canela Text';
+	src: url('/fonts/CanelaText-RegularNo2.otf') format('opentype');
+	font-weight: 450;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Canela Text';
+	src: url('/fonts/CanelaText-RegularNo2Italic.otf') format('opentype');
+	font-weight: 450;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Canela Text';
+	src: url('/fonts/CanelaText-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Canela Text';
+	src: url('/fonts/CanelaText-LightItalic.otf') format('opentype');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Canela Text';
+	src: url('/fonts/CanelaText-Thin.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Canela Text';
+	src: url('/fonts/CanelaText-ThinItalic.otf') format('opentype');
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+}
+
 @import "tailwindcss";
 
 :root {
@@ -18,7 +82,7 @@
 
 @layer base {
 	body {
-		@apply bg-(--bg-1) text-(--fg-1) font-['EB_Garamond',sans-serif] leading-8;
+		@apply bg-(--bg-1) text-(--fg-1) font-['Canela_Text',sans-serif] leading-8;
 		font-feature-settings: 'liga' 1;
 		-webkit-font-feature-settings: 'liga' 1;
 		-moz-font-feature-settings: 'liga' 1;
@@ -33,19 +97,19 @@
 	}
 
 	h1 {
-		@apply font-['Spectral',sans-serif] text-5xl italic font-normal;
+		@apply font-['Canela_Text',sans-serif] text-5xl italic font-light;
 	}
 
 	h2 {
-		@apply font-['Spectral',sans-serif] text-[30px] font-light mt-4;
+		@apply font-['Canela_Text',sans-serif] text-3xl;
 	}
 
 	h3 {
-		@apply font-['Spectral',sans-serif] text-2xl font-semibold;
+		@apply font-['Canela_Text',sans-serif] text-2xl font-semibold;
 	}
 
 	p {
-		@apply font-['EB_Garamond',sans-serif] text-[16pt] leading-8;
+		@apply font-['Canela_Text',sans-serif] text-lg font-light tracking-wide;
 	}
 
 	a {
@@ -57,7 +121,7 @@
 	}
 
 	li {
-		@apply text-lg tracking-[0.05em];
+		@apply text-lg font-['Canela_Text',sans-serif] font-light tracking-wide;
 	}
 
 	.split {

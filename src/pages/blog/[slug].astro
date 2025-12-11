@@ -25,7 +25,7 @@ function formatDate(dateString: string) {
 
 <Layout title={`${post.data.title} - Oliver Huang`}>
 	<main>
-		<article>
+		<article class="post-body">
 			<div class="mb-10 flex flex-col">
 				<h1>{post.data.title}</h1>
 				<div class="flex justify-between">
@@ -34,6 +34,21 @@ function formatDate(dateString: string) {
 				</div>
 			</div>
 			<Content />
+			<p class="text-3xl text-right">
+				◻ 
+			</p>
 		</article>
 	</main>
 </Layout>
+
+<style>
+	/* only affects h2 inside this page’s content */
+	:global(.post-body h2) {
+		/* font-family: 'Spectral', sans-serif;
+		font-size: 26px;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--accent-1); */
+		margin-top: 2rem;
+	}
+</style>
