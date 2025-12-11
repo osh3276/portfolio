@@ -1,72 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Overpass+Mono:wght@300;400;600;700&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-@font-face {
-	font-family: 'Canela Text';
-	src: url('/fonts/CanelaText-Regular.otf') format('opentype');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Canela Text';
-	src: url('/fonts/CanelaText-RegularItalic.otf') format('opentype');
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Canela Text';
-	src: url('/fonts/CanelaText-RegularNo2.otf') format('opentype');
-	font-weight: 450;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Canela Text';
-	src: url('/fonts/CanelaText-RegularNo2Italic.otf') format('opentype');
-	font-weight: 450;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Canela Text';
-	src: url('/fonts/CanelaText-Light.otf') format('opentype');
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Canela Text';
-	src: url('/fonts/CanelaText-LightItalic.otf') format('opentype');
-	font-weight: 300;
-	font-style: italic;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Canela Text';
-	src: url('/fonts/CanelaText-Thin.otf') format('opentype');
-	font-weight: 100;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Canela Text';
-	src: url('/fonts/CanelaText-ThinItalic.otf') format('opentype');
-	font-weight: 100;
-	font-style: italic;
-	font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Meddon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 
 @import "tailwindcss";
+
+@font-face {
+	font-family: 'EB Garamond-08';
+	src: url('/fonts/EBGaramond08-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'EB Garamond-08';
+	src: url('/fonts/EBGaramond08-Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'EB Garamond';
+	src: url('/fonts/EBGaramond12-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'EB Garamond';
+	src: url('/fonts/EBGaramond12-Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
 
 :root {
 	--bg-1: #282828;
@@ -82,10 +55,14 @@
 
 @layer base {
 	body {
-		@apply bg-(--bg-1) text-(--fg-1) font-['Canela_Text',sans-serif] leading-8;
+		@apply bg-(--bg-1) text-(--fg-1) font-['EB_Garamond',sans-serif] leading-8;
 		font-feature-settings: 'liga' 1;
 		-webkit-font-feature-settings: 'liga' 1;
 		-moz-font-feature-settings: 'liga' 1;
+		-webkit-font-smoothing: antialiased;
+  		-moz-osx-font-smoothing: antialiased;
+		  font-feature-settings: "onum" 1;
+	
 	}
 
 	ul {
@@ -97,23 +74,24 @@
 	}
 
 	h1 {
-		@apply font-['Canela_Text',sans-serif] text-5xl italic font-light;
+		@apply font-['EB_Garamond-08',sans-serif] text-5xl italic ;
 	}
 
 	h2 {
-		@apply font-['Canela_Text',sans-serif] text-3xl;
+		@apply font-['EB_Garamond-08',sans-serif] text-3xl;
 	}
 
 	h3 {
-		@apply font-['Canela_Text',sans-serif] text-2xl font-semibold;
+		@apply font-['EB_Garamond-08',sans-serif] text-2xl;
 	}
 
 	p {
-		@apply font-['Canela_Text',sans-serif] text-lg font-light tracking-wide;
+		@apply font-['EB_Garamond-08',sans-serif] text-xl;
+		font-variant-numeric: oldstyle-nums proportional-nums;
 	}
 
 	a {
-		@apply relative inline-block underline decoration-transparent transition-[text-decoration] duration-200;
+		@apply font-['EB_Garamond-08',serif] relative inline-block underline decoration-transparent transition-[text-decoration] duration-200 text-xl;
 	}
 
 	a:hover {
@@ -121,7 +99,7 @@
 	}
 
 	li {
-		@apply text-lg font-['Canela_Text',sans-serif] font-light tracking-wide;
+		@apply text-xl font-['EB_Garamond-08',serif];
 	}
 
 	.split {
