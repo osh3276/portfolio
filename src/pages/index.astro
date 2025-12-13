@@ -1,38 +1,20 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
 ---
 
-<Layout title="Home - Oliver Huang" showHeader={false} showFooter={false}>
-	<div class="flex justify-center">
-		<div class="flex min-h-dvh w-4/5 flex-col justify-center overflow-hidden leading-normal">
-			<h1 class="text-5xl">oliver huang</h1>
-			<p class="mt-2">physics, mathematics, and computer science student.</p>
-			<nav class="mt-1 flex gap-10 text-xl">
-				<a
-					class="text-(--fg-1) underline decoration-transparent decoration-1 underline-offset-3 transition-colors duration-200 hover:decoration-(--fg-1)"
-					href="/about"
-				>
-					about
-				</a>
-				<a
-					class="text-(--fg-1) underline decoration-transparent decoration-1 underline-offset-3 transition-colors duration-200 hover:decoration-(--fg-1)"
-					href="/projects"
-				>
-					projects
-				</a>
-				<a
-					class="text-(--fg-1) underline decoration-transparent decoration-1 underline-offset-3 transition-colors duration-200 hover:decoration-(--fg-1)"
-					href="/blog"
-				>
-					blog
-				</a>
-				<a
-					class="text-(--fg-1) underline decoration-transparent decoration-1 underline-offset-3 transition-colors duration-200 hover:decoration-(--fg-1)"
-					href="/contact"
-				>
-					contact
-				</a>
-			</nav>
-		</div>
+<div
+	class="min-h-screen px-48 flex flex-col justify-center items-start"
+>
+	<div
+		class="p-5 outline -outline-offset-1 flex flex-col justify-center items-start gap-2.5"
+	>
+		<h1 class="text-6xl">oliver huang</h1>
+		<p>physics, mathematics, and computer science student.</p>
+		<nav class="flex gap-8 text-xl">
+			<a href="/about"> about </a>
+			<a href="/projects"> projects </a>
+			<a href="/blog"> blog </a>
+			<a href="/contact"> contact </a>
+		</nav>
 	</div>
-</Layout>
+</div>

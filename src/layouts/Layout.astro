@@ -1,6 +1,6 @@
 ---
-import '../styles/global.css';
-import 'prismjs/themes/prism-tomorrow.css';
+import "../styles/global.css";
+import "prismjs/themes/prism-tomorrow.css";
 
 interface Props {
 	title: string;
@@ -11,11 +11,10 @@ interface Props {
 
 const {
 	title,
-	description = 'oliver huang - physics, mathematics, and computer science student',
+	description = "oliver huang - physics, mathematics, and computer science student",
 	showHeader = true,
-	showFooter = true
+	showFooter = true,
 } = Astro.props;
-
 ---
 
 <!doctype html>
@@ -28,75 +27,70 @@ const {
 		<title>{title}</title>
 	</head>
 	<body class="flex flex-col min-h-screen">
-		{showHeader && (
-			<header class="border-b bg-(--bg-1) text-(--fg-1) h-24 px-6 py-6 flex items-center justify-center md:justify-between transition-colors duration-300">
-				<a href="/" class="text-inherit no-underline hidden md:inline-block">
-					<h1 class="relative inline-block underline decoration-transparent transition-[text-decoration decoration-4] duration-200 hover:decoration-current">
-						oliver huang
-					</h1>
-				</a>
-				<nav class="flex gap-10 md:mr-6">
+		{
+			showHeader && (
+				<header class="border-b bg-(--bg-1) text-(--fg-1) h-24 px-6 py-6 flex items-center justify-center md:justify-between transition-colors duration-300">
 					<a
-						href="/about"
-						class="text-(--fg-1) text-lg underline decoration-transparent decoration-1 underline-offset-3 transition-colors duration-200 hover:decoration-(--fg-1)"
+						href="/"
+						class="text-inherit no-underline hidden md:inline-block"
 					>
-						about
+						<h1 class="relative inline-block underline decoration-transparent transition-[text-decoration decoration-4] duration-200 hover:decoration-current">
+							oliver huang
+						</h1>
 					</a>
-					<a
-						href="/projects"
-						class="text-(--fg-1) text-lg underline decoration-transparent decoration-1 underline-offset-3 transition-colors duration-200 hover:decoration-(--fg-1)"
-					>
-						projects
-					</a>
-					<a
-						href="/blog"
-						class="text-(--fg-1) text-lg underline decoration-transparent decoration-1 underline-offset-3 transition-colors duration-200 hover:decoration-(--fg-1)"
-					>
-						blog
-					</a>
-					<a
-						href="/contact"
-						class="text-(--fg-1) text-lg underline decoration-transparent decoration-1 underline-offset-3 transition-colors duration-200 hover:decoration-(--fg-1)"
-					>
-						contact
-					</a>
-				</nav>
-			</header>
-		)}
+					<nav class="flex gap-10 md:mr-6 text-lg">
+						<a href="/about">about</a>
+						<a href="/projects">projects</a>
+						<a href="/blog">blog</a>
+						<a href="/contact">contact</a>
+					</nav>
+				</header>
+			)
+		}
 
 		<div class="grow w-full">
 			<slot />
 		</div>
 
-		{showFooter && (
-			<footer class="bg-(--bg-1) text-(--fg-1) px-4 py-8 border-t border-(--bg-2) font-['Overpass_Mono',monospace]">
-				<div class="mx-auto flex max-w-5xl justify-center">
-					<div class="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-						<a
-							href="https://www.linkedin.com/in/oliver-huang-931947232/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="flex items-center gap-2 text-base text-(--fg-1) no-underline transition-colors duration-300 hover:text-(--accent-1)"
-						>
-							<svg class="inline-block h-5 w-5" fill="currentColor" viewBox="0 0 256 256">
-								<path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z"></path>
-							</svg>
-							linkedin
-						</a>
-						<a
-							href="https://github.com/osh3276"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="flex items-center gap-2 text-base text-(--fg-1) no-underline transition-colors duration-300 hover:text-(--accent-1)"
-						>
-							<svg class="inline-block h-5 w-5" fill="currentColor" viewBox="0 0 256 256">
-								<path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68Z"></path>
-							</svg>
-							github
-						</a>
+		{
+			showFooter && (
+				<footer class="bg-(--bg-1) text-(--fg-1) px-4 py-8 border-t border-(--bg-2) font-['Overpass_Mono',monospace]">
+					<div class="mx-auto flex max-w-5xl justify-center">
+						<div class="flex flex-wrap items-center justify-center gap-4 md:gap-8">
+							<a
+								href="https://www.linkedin.com/in/oliver-huang-931947232/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="flex items-center gap-2 text-base text-(--fg-1) no-underline transition-colors duration-300 hover:text-(--accent-1)"
+							>
+								<svg
+									class="inline-block h-5 w-5"
+									fill="currentColor"
+									viewBox="0 0 256 256"
+								>
+									<path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z" />
+								</svg>
+								linkedin
+							</a>
+							<a
+								href="https://github.com/osh3276"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="flex items-center gap-2 text-base text-(--fg-1) no-underline transition-colors duration-300 hover:text-(--accent-1)"
+							>
+								<svg
+									class="inline-block h-5 w-5"
+									fill="currentColor"
+									viewBox="0 0 256 256"
+								>
+									<path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68Z" />
+								</svg>
+								github
+							</a>
+						</div>
 					</div>
-				</div>
-			</footer>
-		)}
+				</footer>
+			)
+		}
 	</body>
 </html>

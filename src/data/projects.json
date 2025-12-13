@@ -1,0 +1,38 @@
+[
+	{
+		"href": "https://www.hackcanada.org/",
+		"imageSrc": "/images/hackcanada.png",
+		"title": "hackcanada",
+		"subtitle": "Website for HackCanada, a student organized hackathon in Canada."
+	},
+	{
+		"href": "https://hack404.dev/",
+		"imageSrc": "/images/hack404.png",
+		"title": "hack404",
+		"subtitle": "Website for hack404, a Toronto-based hackathon."
+	},
+	{
+		"href": "https://github.com/gooosexe/boids",
+		"imageSrc": "/images/boids.png",
+		"title": "boids",
+		"subtitle": "A simple simulation of flocking behavior in birds."
+	},
+	{
+		"href": "https://corkboard-gray.vercel.app/",
+		"imageSrc": "/images/corkboard.png",
+		"title": "corkboard",
+		"subtitle": "A message board where all your messages are deleted after 24 hours."
+	},
+	{
+		"href": "https://github.com/gooosexe/nbodysim",
+		"imageSrc": "/images/nbodysim.png",
+		"title": "nbodysim",
+		"subtitle": "A simple 2D N-body simulation, created with matplotlib."
+	},
+	{
+		"href": "https://github.com/osh3276/vibe-tune",
+		"imageSrc": "/images/gemini.jpg",
+		"title": "vibetune",
+		"subtitle": "Video-to-music AI generator powered by Gemini 2.5 Pro and Lyria 2. Made for SpurHacks 2025."
+	}
+]
