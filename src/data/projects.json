@@ -1,5 +1,11 @@
 [
 	{
+		"href": "https://summerhacks.ca/",
+		"imageSrc": "/images/summerhacks.png",
+		"title": "summerhacks",
+		"subtitle": "Website for SummerHacks, an outdoor-oriented hackathon."
+	},
+	{
 		"href": "https://github.com/osh3276/spolf",
 		"imageSrc": "/images/placeholder.png",
 		"title": "spolf",
