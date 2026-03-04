@@ -1,0 +1,26 @@
+:root[data-theme='solarized-dark'] {
+	--bg-1: #002b36;
+	--bg-2: #073642;
+	--bg-3: #586e75;
+	--fg-1: #93a1a1;
+	--fg-2: #839496;
+	--fg-3: #657b83;
+	--accent-magenta: #d33682;
+	--accent-blue: #268bd2;
+	--accent-red: #dc322f;
+	--accent-orange: #cb4b16;
+	--accent-yellow: #b58900;
+	--accent-green: #859900;
+	--accent-cyan: #2aa198;
+	--accent-purple: #6c71c4;
+	--accent-magenta-light: #d33682;
+	--accent-blue-light: #268bd2;
+	--accent-red-light: #dc322f;
+	--accent-orange-light: #cb4b16;
+	--accent-yellow-light: #b58900;
+	--accent-green-light: #859900;
+	--accent-cyan-light: #2aa198;
+	--accent-purple-light: #6c71c4;
+	--code-font: 'CommitMono', monospace;
+	color-scheme: dark;
+}

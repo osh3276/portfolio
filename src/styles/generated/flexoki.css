@@ -1,0 +1,33 @@
+/* Auto-generated from src/styles/flexoki.ts. Do not edit manually. */
+:root {
+	--flexoki-base-50: #f2f0e5;
+	--flexoki-base-100: #e6e4d9;
+	--flexoki-base-150: #dad8ce;
+	--flexoki-base-200: #cecdc3;
+	--flexoki-base-300: #b7b5ac;
+	--flexoki-base-500: #878580;
+	--flexoki-base-600: #6f6e69;
+	--flexoki-base-700: #575653;
+	--flexoki-base-800: #403e3c;
+	--flexoki-base-850: #343331;
+	--flexoki-base-900: #282726;
+	--flexoki-base-950: #1c1b1a;
+	--flexoki-base-black: #100f0f;
+	--flexoki-base-paper: #fffcf0;
+	--flexoki-red: #af3029;
+	--flexoki-red-light: #d14d41;
+	--flexoki-orange: #bc5215;
+	--flexoki-orange-light: #da702c;
+	--flexoki-yellow: #ad8301;
+	--flexoki-yellow-light: #d0a215;
+	--flexoki-green: #66800b;
+	--flexoki-green-light: #879a39;
+	--flexoki-cyan: #24837b;
+	--flexoki-cyan-light: #3aa99f;
+	--flexoki-blue: #205ea6;
+	--flexoki-blue-light: #4385be;
+	--flexoki-purple: #5e409d;
+	--flexoki-purple-light: #8b7ec8;
+	--flexoki-magenta: #a02f6f;
+	--flexoki-magenta-light: #ce5d97;
+}

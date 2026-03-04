@@ -1,0 +1,26 @@
+:root[data-theme='catppuccin-mocha'] {
+	--bg-1: #11111b;
+	--bg-2: #181825;
+	--bg-3: #1e1e2e;
+	--fg-1: #cdd6f4;
+	--fg-2: #bac2de;
+	--fg-3: #a6adc8;
+	--accent-magenta: #f5c2e7;
+	--accent-blue: #89b4fa;
+	--accent-red: #f38ba8;
+	--accent-orange: #fab387;
+	--accent-yellow: #f9e2af;
+	--accent-green: #a6e3a1;
+	--accent-cyan: #94e2d5;
+	--accent-purple: #cba6f7;
+	--accent-magenta-light: #f5c2e7;
+	--accent-blue-light: #b4befe;
+	--accent-red-light: #eba0ac;
+	--accent-orange-light: #fab387;
+	--accent-yellow-light: #f9e2af;
+	--accent-green-light: #a6e3a1;
+	--accent-cyan-light: #89dceb;
+	--accent-purple-light: #b4befe;
+	--code-font: 'CommitMono', monospace;
+	color-scheme: dark;
+}

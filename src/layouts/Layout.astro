@@ -25,6 +25,39 @@ const {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
+		<script is:inline>
+			(() => {
+				const themeStorageKey = "theme-preference";
+				const defaultTheme = "flexoki-dark";
+				const allowedThemes = new Set([
+					"flexoki-dark",
+					"flexoki-light",
+					"gruvbox-dark",
+					"gruvbox-light",
+					"solarized-dark",
+					"solarized-light",
+					"nord",
+					"catppuccin-mocha",
+					"catppuccin-latte",
+				]);
+
+				try {
+					const storedThemeRaw = localStorage.getItem(themeStorageKey);
+					const storedTheme = storedThemeRaw === "catppuccin-frappe"
+						? "catppuccin-latte"
+						: storedThemeRaw;
+					const nextTheme = storedTheme && allowedThemes.has(storedTheme)
+						? storedTheme
+						: defaultTheme;
+					if (storedThemeRaw === "catppuccin-frappe") {
+						localStorage.setItem(themeStorageKey, "catppuccin-latte");
+					}
+					document.documentElement.dataset.theme = nextTheme;
+				} catch {
+					document.documentElement.dataset.theme = defaultTheme;
+				}
+			})();
+		</script>
 	</head>
 	<body class="flex flex-col min-h-screen">
 		{
@@ -38,12 +71,14 @@ const {
 							oliver huang
 						</h1>
 					</a>
-					<nav class="flex gap-10 md:mr-6 text-lg">
-						<a href="/about">about</a>
-						<a href="/projects">projects</a>
-						<a href="/blog">blog</a>
-						<a href="/contact">contact</a>
-					</nav>
+					<div class="flex items-center gap-4 md:mr-6">
+						<nav class="flex gap-10 text-lg">
+							<a href="/about">about</a>
+							<a href="/projects">projects</a>
+							<a href="/blog">blog</a>
+							<a href="/contact">contact</a>
+						</nav>
+					</div>
 				</header>
 			)
 		}
@@ -57,11 +92,47 @@ const {
 				<footer class="bg-(--bg-1) text-(--fg-1) px-4 py-8 border-t border-(--bg-2) font-['Overpass_Mono',monospace]">
 					<div class="mx-auto flex max-w-5xl justify-center">
 						<div class="flex flex-wrap items-center justify-center gap-4 md:gap-8">
+							<label class="sr-only" for="theme-switcher">theme</label>
+							<div class="relative inline-flex items-center">
+								<select
+									id="theme-switcher"
+									aria-label="Theme"
+									class="h-9 appearance-none border border-(--bg-3) bg-(--bg-1) pt-1 pl-2 pr-8 text-sm text-(--fg-1)"
+								>
+									<optgroup label="Flexoki">
+										<option value="flexoki-dark">dark</option>
+										<option value="flexoki-light">light</option>
+									</optgroup>
+									<optgroup label="Gruvbox">
+										<option value="gruvbox-dark">dark</option>
+										<option value="gruvbox-light">light</option>
+									</optgroup>
+									<optgroup label="Solarized">
+										<option value="solarized-dark">dark</option>
+										<option value="solarized-light">light</option>
+									</optgroup>
+									<optgroup label="Nord">
+										<option value="nord">default</option>
+									</optgroup>
+									<optgroup label="Catppuccin">
+										<option value="catppuccin-mocha">mocha</option>
+										<option value="catppuccin-latte">latte</option>
+									</optgroup>
+								</select>
+								<svg
+									class="pointer-events-none absolute right-3 h-3.5 w-3.5 text-(--fg-2)"
+									viewBox="0 0 256 256"
+									fill="currentColor"
+									aria-hidden="true"
+								>
+									<path d="M216.49,104.49a8,8,0,0,1,0,11.31l-80,80a8,8,0,0,1-11.31,0l-80-80a8,8,0,0,1,11.31-11.31L128,176l71.51-71.52A8,8,0,0,1,216.49,104.49Z" />
+								</svg>
+							</div>
 							<a
 								href="https://www.linkedin.com/in/oliver-huang-931947232/"
 								target="_blank"
 								rel="noopener noreferrer"
-								class="flex items-center gap-2 text-base text-(--fg-1) no-underline transition-colors duration-300 hover:text-(--accent-1)"
+								class="flex items-center gap-2 text-base text-(--fg-1) no-underline transition-colors duration-300 hover:text-(--accent-magenta)"
 							>
 								<svg
 									class="inline-block h-5 w-5"
@@ -76,7 +147,7 @@ const {
 								href="https://github.com/osh3276"
 								target="_blank"
 								rel="noopener noreferrer"
-								class="flex items-center gap-2 text-base text-(--fg-1) no-underline transition-colors duration-300 hover:text-(--accent-1)"
+								class="flex items-center gap-2 text-base text-(--fg-1) no-underline transition-colors duration-300 hover:text-(--accent-magenta)"
 							>
 								<svg
 									class="inline-block h-5 w-5"
@@ -92,5 +163,26 @@ const {
 				</footer>
 			)
 		}
+		<script is:inline>
+			(() => {
+				const themeStorageKey = "theme-preference";
+				const switcher = document.getElementById("theme-switcher");
+
+				if (!switcher || !(switcher instanceof HTMLSelectElement)) {
+					return;
+				}
+
+				const activeTheme = document.documentElement.dataset.theme || "flexoki-dark";
+				switcher.value = activeTheme;
+
+				switcher.addEventListener("change", (event) => {
+					const selectedTheme = event.target.value;
+					document.documentElement.dataset.theme = selectedTheme;
+					try {
+						localStorage.setItem(themeStorageKey, selectedTheme);
+					} catch {}
+				});
+			})();
+		</script>
 	</body>
 </html>

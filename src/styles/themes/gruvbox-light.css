@@ -1,0 +1,26 @@
+:root[data-theme='gruvbox-light'] {
+	--bg-1: #fbf1c7;
+	--bg-2: #ebdbb2;
+	--bg-3: #d5c4a1;
+	--fg-1: #282828;
+	--fg-2: #3c3836;
+	--fg-3: #504945;
+	--accent-magenta: #b16286;
+	--accent-blue: #458588;
+	--accent-red: #cc241d;
+	--accent-orange: #d65d0e;
+	--accent-yellow: #d79921;
+	--accent-green: #98971a;
+	--accent-cyan: #689d6a;
+	--accent-purple: #8f3f71;
+	--accent-magenta-light: #b16286;
+	--accent-blue-light: #458588;
+	--accent-red-light: #cc241d;
+	--accent-orange-light: #d65d0e;
+	--accent-yellow-light: #d79921;
+	--accent-green-light: #98971a;
+	--accent-cyan-light: #689d6a;
+	--accent-purple-light: #8f3f71;
+	--code-font: 'CommitMono', monospace;
+	color-scheme: light;
+}
