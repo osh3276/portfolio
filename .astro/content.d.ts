@@ -183,6 +183,14 @@ declare module 'astro:content' {
   rendered?: RenderedContent;
   filePath?: string;
 }>;
+"unlist": Record<string, {
+  id: string;
+  body?: string;
+  collection: "unlist";
+  data: any;
+  rendered?: RenderedContent;
+  filePath?: string;
+}>;
 
 	};
 
