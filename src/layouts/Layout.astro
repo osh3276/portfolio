@@ -24,6 +24,7 @@ const {
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="alternate" type="application/rss+xml" href="/rss.xml" />
 		<title>{title}</title>
 		<script is:inline>
 			(() => {
@@ -42,15 +43,21 @@ const {
 				]);
 
 				try {
-					const storedThemeRaw = localStorage.getItem(themeStorageKey);
-					const storedTheme = storedThemeRaw === "catppuccin-frappe"
-						? "catppuccin-latte"
-						: storedThemeRaw;
-					const nextTheme = storedTheme && allowedThemes.has(storedTheme)
-						? storedTheme
-						: defaultTheme;
+					const storedThemeRaw =
+						localStorage.getItem(themeStorageKey);
+					const storedTheme =
+						storedThemeRaw === "catppuccin-frappe"
+							? "catppuccin-latte"
+							: storedThemeRaw;
+					const nextTheme =
+						storedTheme && allowedThemes.has(storedTheme)
+							? storedTheme
+							: defaultTheme;
 					if (storedThemeRaw === "catppuccin-frappe") {
-						localStorage.setItem(themeStorageKey, "catppuccin-latte");
+						localStorage.setItem(
+							themeStorageKey,
+							"catppuccin-latte",
+						);
 					}
 					document.documentElement.dataset.theme = nextTheme;
 				} catch {
@@ -92,7 +99,9 @@ const {
 				<footer class="bg-(--bg-1) text-(--fg-1) px-4 py-8 border-t border-(--bg-2) font-['Overpass_Mono',monospace]">
 					<div class="mx-auto flex max-w-5xl justify-center">
 						<div class="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-							<label class="sr-only" for="theme-switcher">theme</label>
+							<label class="sr-only" for="theme-switcher">
+								theme
+							</label>
 							<div class="relative inline-flex items-center">
 								<select
 									id="theme-switcher"
@@ -100,23 +109,39 @@ const {
 									class="h-9 appearance-none border border-(--bg-3) bg-(--bg-1) pt-1 pl-2 pr-8 text-sm text-(--fg-1)"
 								>
 									<optgroup label="Flexoki">
-										<option value="flexoki-dark">dark</option>
-										<option value="flexoki-light">light</option>
+										<option value="flexoki-dark">
+											dark
+										</option>
+										<option value="flexoki-light">
+											light
+										</option>
 									</optgroup>
 									<optgroup label="Gruvbox">
-										<option value="gruvbox-dark">dark</option>
-										<option value="gruvbox-light">light</option>
+										<option value="gruvbox-dark">
+											dark
+										</option>
+										<option value="gruvbox-light">
+											light
+										</option>
 									</optgroup>
 									<optgroup label="Solarized">
-										<option value="solarized-dark">dark</option>
-										<option value="solarized-light">light</option>
+										<option value="solarized-dark">
+											dark
+										</option>
+										<option value="solarized-light">
+											light
+										</option>
 									</optgroup>
 									<optgroup label="Nord">
 										<option value="nord">default</option>
 									</optgroup>
 									<optgroup label="Catppuccin">
-										<option value="catppuccin-mocha">mocha</option>
-										<option value="catppuccin-latte">latte</option>
+										<option value="catppuccin-mocha">
+											mocha
+										</option>
+										<option value="catppuccin-latte">
+											latte
+										</option>
 									</optgroup>
 								</select>
 								<svg
@@ -158,6 +183,25 @@ const {
 								</svg>
 								github
 							</a>
+							<a
+								href="/rss.xml"
+								class="flex items-center gap-2 text-base text-(--fg-1) no-underline transition-colors duration-300 hover:text-(--accent-magenta)"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="inline-block h-5 w-5"
+									fill="currentColor"
+									viewBox="0 0 256 256"
+								>
+									<rect
+										width="256"
+										height="256"
+										fill="none"
+									/>
+									<path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM76,192a12,12,0,1,1,12-12A12,12,0,0,1,76,192Zm60,0a8,8,0,0,1-8-8,56.06,56.06,0,0,0-56-56,8,8,0,0,1,0-16,72.08,72.08,0,0,1,72,72A8,8,0,0,1,136,192Zm48,0a8,8,0,0,1-8-8A104.11,104.11,0,0,0,72,80a8,8,0,0,1,0-16A120.13,120.13,0,0,1,192,184,8,8,0,0,1,184,192Z" />
+								</svg>
+								rss
+							</a>
 						</div>
 					</div>
 				</footer>
@@ -172,7 +216,8 @@ const {
 					return;
 				}
 
-				const activeTheme = document.documentElement.dataset.theme || "flexoki-dark";
+				const activeTheme =
+					document.documentElement.dataset.theme || "flexoki-dark";
 				switcher.value = activeTheme;
 
 				switcher.addEventListener("change", (event) => {

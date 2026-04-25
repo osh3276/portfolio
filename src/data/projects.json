@@ -40,11 +40,5 @@
 		"imageSrc": "/images/nbodysim.png",
 		"title": "nbodysim",
 		"subtitle": "A simple 2D N-body simulation, created with matplotlib."
-	},
-	{
-		"href": "https://github.com/osh3276/vibe-tune",
-		"imageSrc": "/images/gemini.jpg",
-		"title": "vibetune",
-		"subtitle": "Video-to-music AI generator powered by Gemini 2.5 Pro and Lyria 2. Made for SpurHacks 2025."
 	}
 ]
