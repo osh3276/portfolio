@@ -17,6 +17,7 @@
     "phosphor-astro": "^2.1.0",
     "prismjs": "^1.30.0",
     "rehype-prism-plus": "^2.0.1",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3"
   }
