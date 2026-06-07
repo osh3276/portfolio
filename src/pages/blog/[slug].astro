@@ -88,6 +88,54 @@ function formatDate(dateString: string) {
 		list-style-type: square;
 	}
 
+	/* blockquote styling */
+	:global(.post-body .post-content blockquote) {
+		border-left: 4px solid var(--accent-cyan);
+		margin: 1.5rem 0;
+		padding: 0.5rem 1.25rem;
+		background: var(--bg-2);
+		border-radius: 0 0.5rem 0.5rem 0;
+	}
+
+	:global(.post-body .post-content blockquote p) {
+		margin: 0;
+		font-style: italic;
+		color: var(--fg-2);
+	}
+
+	:global(.post-body .post-content blockquote cite) {
+		display: block;
+		margin-top: 0.5rem;
+		font-style: normal;
+		font-size: 0.9rem;
+		color: var(--fg-3);
+	}
+
+	/* figure and image caption styling */
+	:global(.post-body .post-content figure) {
+		margin: 1.5rem auto;
+		max-width: 75%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 1px solid var(--fg-3);
+		padding: 1rem;
+		padding-bottom: 0;
+	}
+
+	:global(.post-body .post-content figure img) {
+		width: 100%;
+		height: auto;
+	}
+
+	:global(.post-body .post-content figcaption) {
+		font-size: 1.1rem;
+		color: var(--fg-2);
+		text-align: center;
+		font-style: italic;
+		line-height: 1.2;
+	}
+
 	/* cyan links in blog posts */
 	:global(.post-body .post-content a) {
 		color: var(--accent-cyan);
