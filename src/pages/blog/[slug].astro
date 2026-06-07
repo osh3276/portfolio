@@ -87,4 +87,15 @@ function formatDate(dateString: string) {
 	:global(.post-body .post-content ul ul ul) {
 		list-style-type: square;
 	}
+
+	/* cyan links in blog posts */
+	:global(.post-body .post-content a) {
+		color: var(--accent-cyan);
+		text-decoration: underline;
+		text-decoration-color: var(--accent-cyan);
+	}
+
+	:global(.post-body .post-content a:hover) {
+		filter: brightness(1.25);
+	}
 </style>
