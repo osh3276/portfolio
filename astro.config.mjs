@@ -3,24 +3,25 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
+import { unified } from '@astrojs/markdown-remark';
 import rehypePrism from 'rehype-prism-plus';
 
 import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://gooosexe.github.io',
+	site: 'https://gooosexe.github.io',
 
-  vite: {
-    plugins: [tailwindcss()]
-  },
+	vite: {
+		plugins: [tailwindcss()],
+	},
 
-  integrations: [mdx()],
+	integrations: [mdx()],
 
-  markdown: {
-    rehypePlugins: [rehypePrism],
-    syntaxHighlight: false
-  },
+	markdown: {
+		processor: unified({ rehypePlugins: [rehypePrism] }),
+		syntaxHighlight: false,
+	},
 
-  adapter: vercel()
+	adapter: vercel(),
 });

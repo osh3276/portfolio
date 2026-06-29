@@ -1,5 +1,11 @@
 [
 	{
+		"href": "https://github.com/osh3276/cynthium",
+		"imageSrc": "/images/cynthium.png",
+		"title": "cynthium",
+		"subtitle": "A tool for planning lunar rover traversals."
+	},
+	{
 		"href": "https://summerhacks.ca/",
 		"imageSrc": "/images/summerhacks.png",
 		"title": "summerhacks",
