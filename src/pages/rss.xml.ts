@@ -22,8 +22,8 @@ export async function GET(context: AstroGlobal) {
 			(post) => `
     <item>
       <title>${escapeXml(post.data.title)}</title>
-      <link>https://oliverhuang.ca/blog/${post.slug}</link>
-      <guid>https://oliverhuang.ca/blog/${post.slug}</guid>
+	      <link>https://oliverhuang.ca/blog/${post.id}</link>
+	      <guid>https://oliverhuang.ca/blog/${post.id}</guid>
       <pubDate>${new Date(post.data.date).toUTCString()}</pubDate>
       <description>${escapeXml(post.data.title)}</description>
     </item>
