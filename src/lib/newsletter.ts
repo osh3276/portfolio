@@ -58,10 +58,10 @@ export function verifyConfirmationToken(token: string): string | null {
 
 function supabase() {
 	const url = import.meta.env.SUPABASE_URL as string | undefined;
-	const key = import.meta.env.SUPABASE_SERVICE_ROLE_KEY as string | undefined;
+	const key = import.meta.env.SUPABASE_PUBLISHABLE_KEY as string | undefined;
 	if (!url || !key) {
 		throw new Error(
-			"newsletter: set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY",
+			"newsletter: set SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY",
 		);
 	}
 	return createClient(url, key);
