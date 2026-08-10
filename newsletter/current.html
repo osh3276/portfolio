@@ -15,7 +15,7 @@
 			margin: 0;
 			padding: 0;
 			background-color: #100f0f;
-			font-family: 'EB Garamond', Georgia, serif;
+			font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
 			color: #cecdc3;
 			line-height: 1.6;
 			font-size: 18px;
@@ -31,7 +31,7 @@
 				font-size: 0;
 			"
 		>
-			new issue: what i've been working on, and a few links worth reading.
+			new on the blog: {{LATEST_POST_TITLE}}
 		</div>
 
 		<div style="padding: 32px 16px">
@@ -47,7 +47,6 @@
 						style="
 							background-color: #1c1b1a;
 							border: 1px solid #282726;
-							border-radius: 8px;
 							padding: 40px 40px 32px;
 						"
 					>
@@ -55,9 +54,9 @@
 						<p
 							style="
 								margin: 0 0 32px;
-								font-family: 'Overpass Mono', monospace;
+								font-family: 'Overpass Mono', Consolas, 'Courier New', monospace;
 								font-size: 13px;
-								letter-spacing: 0.15em;
+								letter-spacing: 0.05em;
 								text-transform: lowercase;
 								color: #878580;
 							"
@@ -68,7 +67,7 @@
 						<h1
 							style="
 								margin: 0 0 24px;
-								font-family: 'EB Garamond', Georgia, serif;
+								font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
 								font-style: italic;
 								font-weight: 400;
 								font-size: 42px;
@@ -79,69 +78,30 @@
 							newsletter
 						</h1>
 
-						<p style="margin: 0 0 16px; color: #cecdc3">
-							hey,
-						</p>
-						<p style="margin: 0 0 16px; color: #b7b5ac">
-							thanks for subscribing. this is the first issue: a
-							quick roundup of what i've been working on and
-							reading, whenever i get around to writing it. no
-							schedule, no spam.
+						<p style="margin: 0 0 16px; color: #cecdc3">hi there! i wrote a new post. check it out:</p>
+						<p style="margin: 0 0 24px">
+							<a
+								href="{{LATEST_POST_URL}}"
+								style="
+									color: #3aa99f;
+									text-decoration: underline;
+									font-size: 28px;
+								"
+							>
+								{{LATEST_POST_TITLE}}
+							</a>
 						</p>
 
-						<h2
-							style="
-								margin: 32px 0 12px;
-								font-family: 'EB Garamond', Georgia, serif;
-								font-style: italic;
-								font-weight: 400;
-								font-size: 24px;
-								color: #3aa99f;
-							"
-						>
-							what i've been up to
-						</h2>
-						<ul style="margin: 0 0 16px; padding-left: 20px; color: #b7b5ac">
-							<li style="margin-bottom: 8px">
-								rebuilt the blog from scratch. it's a static
-								site now, so it's fast and the posts render
-								nicely. there's an rss feed if you want
-								updates that way instead.
-							</li>
-							<li style="margin-bottom: 8px">
-								added this newsletter, which you're reading.
-								the whole thing runs on a couple of serverless
-								functions and a postgres table.
-							</li>
-						</ul>
-
-						<h2
-							style="
-								margin: 32px 0 12px;
-								font-family: 'EB Garamond', Georgia, serif;
-								font-style: italic;
-								font-weight: 400;
-								font-size: 24px;
-								color: #3aa99f;
-							"
-						>
-							worth reading
-						</h2>
-						<blockquote
-							style="
-								margin: 0 0 16px;
-								padding: 12px 20px;
-								border-left: 4px solid #3aa99f;
-								background-color: #100f0f;
-								border-radius: 0 8px 8px 0;
-								color: #b7b5ac;
-							"
-						>
-							<p style="margin: 0">
-								a good essay i read this month, and a link to
-								the paper behind it.
-							</p>
-						</blockquote>
+						<p style="margin: 0 0 0; color: #b7b5ac">
+							check the archive at
+							<a
+								href="{{SITE_URL}}/blog"
+								style="color: #3aa99f; text-decoration: underline"
+							>
+								oliverhuang.ca/blog
+							</a>
+							if you want more.
+						</p>
 
 						<p style="margin: 32px 0 0; color: #b7b5ac">
 							take care,
@@ -150,7 +110,7 @@
 							style="
 								margin: 4px 0 0;
 								text-align: right;
-								font-family: 'Meddon', cursive;
+								font-family: 'Meddon', Georgia, 'Times New Roman', serif;
 								font-size: 28px;
 								color: #ce5d97;
 							"
@@ -164,13 +124,13 @@
 								margin: 32px 0 0;
 								padding-top: 24px;
 								border-top: 1px solid #282726;
-								font-family: 'Overpass Mono', monospace;
+								font-family: 'Overpass Mono', Consolas, 'Courier New', monospace;
 								font-size: 12px;
 								line-height: 1.8;
 								color: #878580;
 							"
 						>
-							oliver huang · oliverhuang.ca<br />
+							oliverhuang.ca<br />
 							you're getting this because you subscribed to the
 							newsletter.
 						</p>
