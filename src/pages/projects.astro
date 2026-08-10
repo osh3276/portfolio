@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import projects from '../data/projects.json';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import projects from "../data/projects.json";
 
 interface ProjectData {
 	href: string;
@@ -12,18 +12,24 @@ interface ProjectData {
 ---
 
 <Layout title="Projects - Oliver Huang">
-	<div class="self-stretch py-8 flex justify-center items-start overflow-hidden">
+	<div
+		class="self-stretch py-8 flex justify-center items-start overflow-hidden"
+	>
 		<div class="w-full max-w-[calc(3*380px+4rem)] flex flex-col gap-8 px-6">
 			<h1>projects</h1>
-			<div class="inline-flex justify-start items-stretch gap-8 overflow-hidden flex-wrap">
-				{projects.map((project) => (
-					<Card
-						href={project.href}
-						imageSrc={project.imageSrc}
-						title={project.title}
-						subtitle={project.subtitle}
-					/>
-				))}
+			<div
+				class="inline-flex justify-start items-stretch gap-8 overflow-hidden flex-wrap"
+			>
+				{
+					projects.map((project) => (
+						<Card
+							href={project.href}
+							imageSrc={project.imageSrc}
+							title={project.title}
+							subtitle={project.subtitle}
+						/>
+					))
+				}
 			</div>
 		</div>
 	</div>
