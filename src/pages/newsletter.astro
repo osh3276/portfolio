@@ -8,7 +8,7 @@ import Layout from "../layouts/Layout.astro";
 
 		<section class="mb-10">
 			<p class="mt-2 leading-loose">
-				receive an email when i post. no spam, unsubscribe anytime.
+				receive an email when i post. unsubscribe anytime.
 			</p>
 		</section>
 
@@ -40,12 +40,8 @@ import Layout from "../layouts/Layout.astro";
 					</button>
 				</div>
 
-				<p
-					id="status"
-					class="text-lg"
-					role="status"
-					aria-live="polite"
-				></p>
+				<p id="status" class="text-lg" role="status" aria-live="polite">
+				</p>
 			</form>
 		</section>
 	</main>
@@ -53,7 +49,9 @@ import Layout from "../layouts/Layout.astro";
 
 <script>
 	const form = document.getElementById("newsletter-form") as HTMLFormElement;
-	const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
+	const submitBtn = document.getElementById(
+		"submit-btn",
+	) as HTMLButtonElement;
 	const status = document.getElementById("status") as HTMLParagraphElement;
 
 	form?.addEventListener("submit", async (e) => {
