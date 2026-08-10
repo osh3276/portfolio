@@ -8,8 +8,7 @@ import Layout from "../layouts/Layout.astro";
 
 		<section class="mb-10">
 			<p class="mt-2 leading-loose">
-				occasional posts about whatever i'm working on. no spam, unsubscribe
-				anytime.
+				receive an email when i post. no spam, unsubscribe anytime.
 			</p>
 		</section>
 
@@ -72,7 +71,7 @@ import Layout from "../layouts/Layout.astro";
 			});
 			const result = await response.json();
 			status.textContent =
-				result.message ?? "something went wrong, try again";
+				result.message ?? "something went wrong, try again.";
 			if (result.ok) {
 				submitBtn.textContent = "subscribed!";
 				form.reset();
@@ -81,7 +80,7 @@ import Layout from "../layouts/Layout.astro";
 			}
 		} catch (error) {
 			submitBtn.textContent = "subscribe";
-			status.textContent = "something went wrong, try again";
+			status.textContent = "something went wrong, try again.";
 		}
 	});
 </script>

@@ -33,7 +33,7 @@ function requireEnv(name) {
 
 const apiKey = requireEnv("RESEND_API_KEY");
 const supabaseUrl = requireEnv("SUPABASE_URL");
-const supabaseKey = requireEnv("SUPABASE_PUBLISHABLE_KEY");
+const supabaseKey = requireEnv("SUPABASE_SERVICE_ROLE_KEY");
 const from = requireEnv("NEWSLETTER_FROM");
 const siteUrl = requireEnv("SITE_URL");
 const subject = process.env.NEWSLETTER_SUBJECT ?? "new post from oliver";
