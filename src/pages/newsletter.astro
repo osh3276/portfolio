@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Newsletter - Oliver Huang">
+	<main>
+		<h1 class="mb-10">newsletter</h1>
+
+		<section class="mb-10">
+			<p class="mt-2 leading-loose">
+				receive an email when i post. no spam, unsubscribe anytime.
+			</p>
+		</section>
+
+		<section>
+			<form id="newsletter-form" class="mt-2 space-y-4">
+				<div class="space-y-2">
+					<label
+						for="email"
+						class="block text-lg font-medium tracking-wider"
+						>email</label
+					>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						required
+						placeholder="you@example.com"
+						class="w-full bg-(--bg-1) border-1 border-(--bg-2) p-2 text-base tracking-[0.05em] transition-colors duration-200 focus:outline-none focus:border-(--accent-green)"
+					/>
+				</div>
+
+				<div>
+					<button
+						type="submit"
+						id="submit-btn"
+						class="bg-(--bg-2) text-(--fg-1) px-4 py-2 text-base tracking-wider transition duration-200 hover:ring-2 hover:ring-(--accent-green)"
+					>
+						subscribe
+					</button>
+				</div>
+
+				<p
+					id="status"
+					class="text-lg"
+					role="status"
+					aria-live="polite"
+				></p>
+			</form>
+		</section>
+	</main>
+</Layout>
+
+<script>
+	const form = document.getElementById("newsletter-form") as HTMLFormElement;
+	const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
+	const status = document.getElementById("status") as HTMLParagraphElement;
+
+	form?.addEventListener("submit", async (e) => {
+		e.preventDefault();
+
+		const email = (new FormData(form).get("email") as string).trim();
+		submitBtn.textContent = "subscribing...";
+		status.textContent = "";
+
+		try {
+			const response = await fetch("/api/subscribe", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ email }),
+			});
+			const result = await response.json();
+			status.textContent =
+				result.message ?? "something went wrong, try again.";
+			if (result.ok) {
+				submitBtn.textContent = "subscribed!";
+				form.reset();
+			} else {
+				submitBtn.textContent = "subscribe";
+			}
+		} catch (error) {
+			submitBtn.textContent = "subscribe";
+			status.textContent = "something went wrong, try again.";
+		}
+	});
+</script>
