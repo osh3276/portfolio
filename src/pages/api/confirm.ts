@@ -7,34 +7,32 @@ import {
 export const prerender = false;
 
 export const GET: APIRoute = async ({ url }) => {
-	const token = url.searchParams.get("token") ?? "";
-	const email = token.length > 0 ? verifyConfirmationToken(token) : null;
-
-	if (!email) {
-		return new Response(page(false), {
-			headers: { "Content-Type": "text/html; charset=utf-8" },
-		});
-	}
-
 	try {
+		const token = url.searchParams.get("token") ?? "";
+		const email = token.length > 0 ? verifyConfirmationToken(token) : null;
+
+		if (!email) {
+			return html(page(false));
+		}
+
 		await confirmSubscriber(email);
-		return new Response(page(true), {
-			headers: { "Content-Type": "text/html; charset=utf-8" },
-		});
+		return html(page(true));
 	} catch (error) {
 		console.error("confirm error:", error);
-		return new Response(page(false), {
-			headers: { "Content-Type": "text/html; charset=utf-8" },
-		});
+		const detail = error instanceof Error ? error.message : String(error);
+		return html(page(false, detail));
 	}
 };
 
-function page(ok: boolean): string {
+function page(ok: boolean, detail?: string): string {
 	const body = ok
 		? `<h1>you're in</h1>
 		   <p>your subscription is confirmed. thanks for reading.</p>`
-		: `<h1>link expired</h1>
-		   <p>this confirmation link is invalid or has expired. try subscribing again.</p>`;
+		: detail
+			? `<h1>something went wrong</h1>
+			   <p style="color: #b00">${detail}</p>`
+			: `<h1>link expired</h1>
+			   <p>this confirmation link is invalid or has expired. try subscribing again.</p>`;
 	return `<!doctype html>
 <html lang="en">
 	<head>
@@ -47,4 +45,10 @@ function page(ok: boolean): string {
 		<p><a href="/">back home</a></p>
 	</body>
 </html>`;
+}
+
+function html(content: string): Response {
+	return new Response(content, {
+		headers: { "Content-Type": "text/html; charset=utf-8" },
+	});
 }

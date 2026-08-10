@@ -27,8 +27,9 @@ export const POST: APIRoute = async ({ request }) => {
 		});
 	} catch (error) {
 		console.error("subscribe error:", error);
+		const detail = error instanceof Error ? error.message : String(error);
 		return json(
-			{ ok: false, message: "something went wrong, try again" },
+			{ ok: false, message: `something went wrong: ${detail}` },
 			500,
 		);
 	}
