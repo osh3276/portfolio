@@ -3,10 +3,9 @@ import Layout from "../layouts/Layout.astro";
 
 // TODO: fill these in with what you're actually up to
 const now = [
-	"studying physics and math at the university of toronto",
-	"reading: the iliad, the sword of kaigen",
-	"currently: wasting money on vintage bikes",
-	"soon: going back to school..."
+	{ label: "reading", value: "the iliad, the sword of kaigen" },
+	{ label: "currently", value: "wasting money on vintage bikes" },
+	{ label: "soon", value: "going back to school..." },
 ];
 
 const interests = {
@@ -24,82 +23,110 @@ const interests = {
 
 		<section>
 			<p class="mt-2">
-				I&rsquo;m an undergraduate student studying physics and math at the
+				I&rsquo;m a third year undergraduate student studying physics and math at the
 				University of Toronto.
 			</p>
 		</section>
 
 		<section>
 			<h2>now</h2>
-			<ul>
-				{
-					now.map((item) => (
-						<li>{item}</li>
-					))
-				}
-			</ul>
+			<div class="flex font-['EB_Garamond-08',serif] text-xl my-3">
+				<div
+					class="flex flex-col items-end border-r border-(--fg-1) pr-3 mr-4"
+				>
+					{now.map((item) => <span>{item.label}</span>)}
+				</div>
+				<div class="flex flex-col">
+					{now.map((item) => <span>{item.value}</span>)}
+				</div>
+			</div>
 		</section>
 
 		<section>
 			<h2>interests</h2>
-			<ul>
-				{
-					Object.entries(interests).map(([category, items]) => (
-						<li>
-							{category} →
-							{items.map((item, i) => (
-								<>
-									{item}
-									{i < items.length - 1 && (
-										<>
-											<span class="split"> - </span>
-										</>
-									)}
-								</>
-							))}
-						</li>
-					))
-				}
-			</ul>
+			<div class="flex font-['EB_Garamond-08',serif] text-xl my-3">
+				<div
+					class="flex flex-col items-end border-r border-(--fg-1) pr-3 mr-4"
+				>
+					{
+						Object.keys(interests).map((category) => (
+							<span>{category}</span>
+						))
+					}
+				</div>
+				<div class="flex flex-col">
+					{
+						Object.values(interests).map((items) => (
+							<span>
+								{items.map((item, i) => (
+									<>
+										{item}
+										{i < items.length - 1 && (
+											<>
+												<span class="split"> - </span>
+											</>
+										)}
+									</>
+								))}
+							</span>
+						))
+					}
+				</div>
+			</div>
 		</section>
 
 		<section>
 			<h2>colophon</h2>
-			<p>
-				stack → astro <span class="split">/</span> mdx
-				<span class="split">/</span> vite <span class="split">/</span>
-				vercel
-				<br>
-				fonts →
-				<span style="font-family: 'EB Garamond', serif;">eb garamond</span>
-				<span class="split"> - </span>
-				<span style="font-family: 'CommitMono'; font-size: 16px"
-					>commit mono</span
+			<div class="flex font-['EB_Garamond-08',serif] text-xl my-3">
+				<div
+					class="flex flex-col items-end border-r border-(--fg-1) pr-3 mr-4"
 				>
-				<span class="split"> - </span>
-				<span style="font-family: 'Meddon'; font-size: 16px">meddon</span>
-			</p>
+					<span>stack</span>
+					<span>fonts</span>
+				</div>
+				<div class="flex flex-col">
+					<span>
+						astro <span class="split"> - </span> mdx
+						<span class="split"> - </span> vite <span class="split"> - </span>
+						vercel
+					</span>
+					<span>
+						<span style="font-family: 'EB Garamond', serif;"
+							>eb garamond</span
+						>
+						<span class="split"> - </span>
+						<span style="font-family: 'CommitMono'; font-size: 16px"
+							>commit mono</span
+						>
+						<span class="split"> - </span>
+						<span style="font-family: 'Meddon'; font-size: 16px"
+							>meddon</span
+						>
+					</span>
+				</div>
+			</div>
 			<p>
-				Theme colours from <a href="https://stephango.com/flexoki"
-					>flexoki</a
+				The theme colours from <a href="https://stephango.com/flexoki"
+					>Flexoki</a
 				>
 				<span class="split">, </span> <a
 					href="https://github.com/morhetz/gruvbox"
-					>gruvbox</a
+					>Gruvbox</a
 				>
 				<span class="split">, </span> <a
 					href="https://ethanschoonover.com/solarized/"
-					>solarized</a
+					>Solarized</a
 				>
 				<span class="split">, </span> <a href="https://www.nordtheme.com"
-					>nord</a
+					>Nord</a
 				>
-				<span class="split">, </span> <a href="https://catppuccin.com"
-					>catppuccin</a>. Use the theme switcher below to toggle between themes!
+				<span class="split">, and </span> <a href="https://catppuccin.com"
+					>Catppuccin</a
+				>. Use the theme switcher below to toggle between themes!
 				<br>
-				Site layout was inspired by <a href="https://refact0r.dev"
+				The site layout was inspired by <a href="https://refact0r.dev"
 					><em>refact0r.dev</em></a
-				>.
+				>. His website is much cooler than mine.
 			</p>
 			<div class="info pt-10 pb-4">
 				<div
