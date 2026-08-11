@@ -1,26 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const content = {
-	languages: {
-		general: ["python", "java", "c", "c++", "a little c#"],
-		web: ["js", "ts", "html", "css"],
-	},
-	tech: {
-		frontend: ["next.js", "react", "sveltekit", "tailwind"],
-		backend: [
-			"node.js",
-			"express",
-			"postgresql",
-			"mongodb",
-			"spring",
-			"flask",
-		],
-		tools: ["docker", "postman", "git", "pgadmin", "dbeaver"],
-		cloud: ["gcp", "aws"],
-		os: ["macos tahoe"],
-	},
+// TODO: fill these in with what you're actually up to
+const now = [
+	"studying physics and math at the university of toronto",
+	"reading: the iliad, the sword of kaigen",
+	"currently: wasting money on vintage bikes",
+	"soon: going back to school..."
+];
+
+const interests = {
+	pens: ["fountain pens", "ink"],
+	cycling: ["bike wrenching", "fixed gear"],
+	outdoors: ["camping", "hiking"],
+	software: ["banging away at the puter"],
 };
+
 ---
 
 <Layout title="About - Oliver Huang">
@@ -29,42 +24,27 @@ const content = {
 
 		<section>
 			<p class="mt-2">
-				I&rsquo;m an undergraduate student studying physics and math at
-				the University of Toronto. I work on projects from time to time
-				and write in my silly blog.
+				I&rsquo;m an undergraduate student studying physics and math at the
+				University of Toronto.
 			</p>
 		</section>
 
 		<section>
-			<h2>languages</h2>
+			<h2>now</h2>
 			<ul>
 				{
-					Object.entries(content.languages).map(
-						([category, items]) => (
-							<li>
-								{category} →
-								{items.map((item, i) => (
-									<>
-										{item}
-										{i < items.length - 1 && (
-											<>
-												<span class="split"> - </span>
-											</>
-										)}
-									</>
-								))}
-							</li>
-						),
-					)
+					now.map((item) => (
+						<li>{item}</li>
+					))
 				}
 			</ul>
 		</section>
 
 		<section>
-			<h2>tech</h2>
+			<h2>interests</h2>
 			<ul>
 				{
-					Object.entries(content.tech).map(([category, items]) => (
+					Object.entries(interests).map(([category, items]) => (
 						<li>
 							{category} →
 							{items.map((item, i) => (
@@ -84,48 +64,43 @@ const content = {
 		</section>
 
 		<section>
-			<h2>this site</h2>
-			<ul>
-				<p>
-					Theme colours from <a href="https://stephango.com/flexoki"
-						>Flexoki</a
-					>, <a href="https://github.com/morhetz/gruvbox">Gruvbox</a>, <a
-						href="https://ethanschoonover.com/solarized/"
-						>Solarized</a
-					>, <a href="https://www.nordtheme.com">Nord</a>, and <a
-						href="https://catppuccin.com">Catppuccin</a
-					>. <br /> Use the theme switcher below to switch between them.
-				</p>
-				<li>
-					stack → astro <span class="split">/</span> mdx
-					<span class="split">/</span> vite <span class="split"
-						>/</span
-					> vercel
-				</li>
-				<li>
-					fonts →
-					<span
-						style="font-family: 'EB Garamond', serif;"
-						class="tracking-normal">eb garamond</span
-					>
-					<span class="split"> - </span>
-					<span
-						style="font-family: 'CommitMono'; font-size: 16px"
-						class="tracking-normal">commit mono</span
-					>
-					<span class="split"> - </span>
-
-					<span
-						style="font-family: 'Meddon'; font-size: 16px"
-						class="tracking-normal">meddon</span
-					>
-				</li>
-				<li>
-					Site layout inspired by <a href="https://refact0r.dev"
-						><em>refact0r</em></a
-					>.
-				</li>
-			</ul>
+			<h2>colophon</h2>
+			<p>
+				stack → astro <span class="split">/</span> mdx
+				<span class="split">/</span> vite <span class="split">/</span>
+				vercel
+				<br>
+				fonts →
+				<span style="font-family: 'EB Garamond', serif;">eb garamond</span>
+				<span class="split"> - </span>
+				<span style="font-family: 'CommitMono'; font-size: 16px"
+					>commit mono</span
+				>
+				<span class="split"> - </span>
+				<span style="font-family: 'Meddon'; font-size: 16px">meddon</span>
+			</p>
+			<p>
+				Theme colours from <a href="https://stephango.com/flexoki"
+					>flexoki</a
+				>
+				<span class="split">, </span> <a
+					href="https://github.com/morhetz/gruvbox"
+					>gruvbox</a
+				>
+				<span class="split">, </span> <a
+					href="https://ethanschoonover.com/solarized/"
+					>solarized</a
+				>
+				<span class="split">, </span> <a href="https://www.nordtheme.com"
+					>nord</a
+				>
+				<span class="split">, </span> <a href="https://catppuccin.com"
+					>catppuccin</a>. Use the theme switcher below to toggle between themes!
+				<br>
+				Site layout was inspired by <a href="https://refact0r.dev"
+					><em>refact0r.dev</em></a
+				>.
+			</p>
 			<div class="info pt-10 pb-4">
 				<div
 					class="colors flex flex-wrap justify-center overflow-hidden rounded-full"
